@@ -1,0 +1,73 @@
+{
+  "repo_url": "https://github.com/oliviaobodoagha-web/closet-twin",
+  "morning_minutes_before": "",
+  "shoe_search_before": "about a week of searching (self-reported from her real past search, not timed today)",
+  "impact_intro": "On Mon Oct 26 I chose my real outfit for a real recruiting day (a campus event, career office hours and three consulting recruiting conversations) from my own cataloged closet, first alone, then with Closet Twin.",
+  "before_outfit": "105 min",
+  "after_outfit": "5.5 min",
+  "before_shoes": "about a week",
+  "after_shoes": "10 min",
+  "quote": "I like that it isn't so hard. Having bigger than average feet, I would dread shoe shopping and I had to choose outfits that would match my shoes instead of the other way around. This is life-changing.",
+  "test_date": "2026-10-26",
+  "tester": "Olivia (real closet + real calendar, My closet data set)",
+  "tasks": {
+    "outfit": {
+      "task": "Choose today's full outfit (Mon 2026-10-26) from my real closet for my real calendar + weather",
+      "before": {
+        "minutes": 105,
+        "decided": null,
+        "would_wear": null,
+        "why": "",
+        "clicks_or_sites": null
+      },
+      "after": {
+        "minutes": 5.5,
+        "decided": true,
+        "would_wear": true,
+        "why": "Approved in the app: Tell box 'Love this direction' on today's plan (saved to profile 10:30 ET). Reason in her words: pending.",
+        "clicks": null,
+        "cost_usd": 0.0109,
+        "run": "Saved plan for 2026-10-26 on My closet (run 0acfa8fc8a, made this morning: $0.0109, 5 model calls, 158.5 s; reopening it is $0, no model call). Headline: 'City-prep polish for campus, with a confident red finish for recruiter conversations'; 2 looks (11:00-13:00 campus cider + CDO office hours; 13:50-17:00 recruiter coffee chat + career conversations).",
+        "screenshots": [
+          "docs/screenshots/personal/b2_outfit_calendar.jpg",
+          "docs/screenshots/personal/b2_outfit_after.jpg"
+        ]
+      }
+    },
+    "shoes": {
+      "task": "Find a polished, comfortable wide-width shoe in my size (12 W) I would buy",
+      "before": {
+        "minutes": null,
+        "found": null,
+        "would_buy": null,
+        "why": "",
+        "sites_visited": null,
+        "clicks": null,
+        "self_reported": "about a week of searching (past, not timed today)"
+      },
+      "after": {
+        "minutes": 10,
+        "found": true,
+        "would_buy": true,
+        "why": "Olivia: 'yes I would buy the shoes it found' (picks: Naturalizer Flexy Ballet Flat 12 W at DSW, critic-approved; Cosmic Mary Jane, which she added to her price tracker).",
+        "clicks": null,
+        "cost_usd": 0.1762,
+        "run": "3 live searches in the Shop tab (My closet), 14:44-14:48 UTC: (1) 'loafers with a wide toe box' answered by the ban pre-check before any search ($0, 0 calls; her men's-style-loafer ban); (2) 'business to day wear shoes that are walkable' ($0.0546, 4 calls, 34 s, 5 web searches): 1 pick, Naturalizer Flexy Ballet Flat at DSW, size 12 Wide, critic APPROVE; (3) same + 'with wide toe box' ($0.1216, 8 calls, 82 s, 11 web searches, critic asked for a second search): 3 picks shown, Naturalizer Behold Mary Jane Flat (12 W), Naturalizer Cosmic Mary Jane at DSW (12 W), Clarks Carleigh Jane (12 W); critic REVISE: roomy toe box and long-walk comfort not confirmed by the listings.",
+        "screenshots": [
+          "docs/screenshots/personal/b2_shoes_trace.jpg",
+          "docs/screenshots/personal/b2_shoes_trace_end.jpg",
+          "docs/screenshots/personal/b2_shoes_watching.jpg"
+        ],
+        "tracked": "Added Naturalizer Cosmic Mary Jane (DSW, $124.99) to the price tracker"
+      }
+    }
+  },
+  "classmates": [],
+  "not_measured": [
+    "Shoe 'before' is self-reported from a real past search (about a week), not timed today.",
+    "Outfit 'after' used the plan the app made for today earlier this morning (made in 158 s for $0.0109); the 5.5 min is her time to open, review and approve it, not including that model run.",
+    "Clicks were not counted for either task.",
+    "No classmates tested (only one real user: Olivia).",
+    "Outfit 'before' sites/apps used not recorded."
+  ]
+}
