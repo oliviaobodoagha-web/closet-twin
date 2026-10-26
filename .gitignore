@@ -13,6 +13,7 @@ data/user/
 
 # Run logs are written locally
 logs/*.jsonl
+logs/*.log
 
 .DS_Store
 .claude/
@@ -33,6 +34,8 @@ report.html
 slides.html
 docs/_*_filled.html
 data/*/memory.json
+# the Sample set ships one saved plan (10/26) so graders can see a finished plan for free
+!data/sample/memory.json
 data/*/watchlist.json
 
 # background-removal models (downloaded on first use)
