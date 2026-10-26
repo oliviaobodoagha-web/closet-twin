@@ -56,42 +56,76 @@
     "persona": "uptown_prep",
     "extra_rules": [],
     "read": {
-      "signature": "Classic at the core, polished with Elegant Chic: clean tailoring in warm neutrals, finished with a deliberate pop of color when the moment calls for it.",
+      "signature": "Classic tailoring with Elegant Chic polish: cream silk, black wide-leg lines, and camel structure, with room for a purposeful color accent.",
       "bullets": [
-        "Keep the cream silk blouse, black wide-leg trousers, and blazer in rotation: you loved how polished and like yourself it felt for a coffee chat.",
-        "Lean into clean, tailored lines and cream, camel, and black; use hot pink as a considered accent rather than adding lots of competing detail.",
-        "Skip the black puffer for quick walks\u2014the half-zip feels like enough\u2014and stop recommending the loafers, which pinch after a mile.",
-        "Keep comfort practical as well as polished: the shoes you suggest should avoid pointed toes and work for a two-mile walk.",
-        "Try the loved blouse-and-trouser combination with your camel trench for a fresh recruiting-ready variation; it builds on your Classic foundation with Elegant Chic ease."
+        "The cream silk blouse, black wide-leg trousers, and tailored blazer felt like you at your coffee chat; keep that clean, polished formula in rotation.",
+        "Your comfort rules are specific: skip the black loafers that pinch, and choose walkable shoes with no pointed toe and a heel no higher than two inches.",
+        "For a quick gym walk, the half-zip is enough; don\u2019t put the bulky black puffer over your spin clothes.",
+        "Your closet supports a warm-neutral foundation, while your stated love of hot pink makes a deliberate pop of color worth keeping in the mix.",
+        "Next, try the blouse-and-trouser combination under the camel trench for a polished, recruiting-ready variation."
       ],
       "suggested_blend": [
         "Classic",
         "Elegant Chic",
         "Romantic"
       ],
-      "blend_why": "Your reactions reinforce the existing blend: the tailored blazer-and-trouser outfit felt like you, and your preference for polished minimalism aligns with Elegant Chic. There isn\u2019t enough feedback to shift the Romantic accent; the satin skirt and other softer pieces haven\u2019t been discussed in your reactions.",
+      "strategy": [
+        {
+          "move": "Keep wearing",
+          "text": "Keep pairing the cream silk blouse with the black wide-leg trousers; you said this polished combination felt like yourself."
+        },
+        {
+          "move": "Try next",
+          "text": "Layer the camel trench over that loved blouse-and-trouser outfit for a fresh recruiting-ready version."
+        },
+        {
+          "move": "Add",
+          "text": "Look for a cropped, tailored deep-teal jacket to bring the board\u2019s distinctive shorter-jacket shape and your rich-season color into the closet."
+        },
+        {
+          "move": "Add",
+          "text": "When you need a polished shoe, try a rounded-toe, walkable flat or low block-heel shoe in a warm brown leather, honoring your comfort rules."
+        },
+        {
+          "move": "Phase out",
+          "text": "Stop building outfits around the black leather loafers that pinch; they do not meet your walking comfort rule."
+        },
+        {
+          "move": "Styling habit",
+          "text": "Keep the black puffer for genuinely cold-weather needs, not quick gym walks where your grey half-zip already feels like enough."
+        }
+      ],
+      "goal": {
+        "title": "Warm-toned city classic",
+        "look": "A cream silk blouse tucked into black high-rise wide-leg trousers, under a cropped tailored deep-teal jacket; layer the camel trench over it. Finish with cognac leather ankle boots with a block heel, a structured chocolate leather bag, and small gold earrings. The cropped jacket and trench bring the board\u2019s polished city structure, with deep teal as the rich color accent.",
+        "image": "a-b993c21b0f.jpg"
+      },
+      "blend_why": "Your one positive outfit reaction strongly supports the Classic foundation and Elegant Chic finish: tailored pieces, silk, and a polished result that felt like you. Romantic remains a light accent in your stated blend, but there is not yet enough feedback to know how much softness you want in everyday outfits.",
       "n_feedback": 3,
       "at": "2026-10-26"
     },
     "pending_qs": [
       {
-        "q": "What was it about the black puffer over leggings that felt wrong for a short walk?",
-        "multi": false,
+        "q": "You\u2019ve turned down the black leggings, but I don\u2019t yet know what missed for you. Was it the leggings themselves or that particular outfit?",
+        "multi": true,
         "options": [
-          "Too bulky",
-          "Too much warmth",
-          "The outfit felt too sporty",
+          "The fit or silhouette",
+          "The fabric or comfort",
+          "The sporty look",
+          "That outfit combination",
           "Something else"
         ],
         "id": "f20261026-3-0"
       },
       {
-        "q": "For a polished look with a pop of color, which direction would you be most curious to try next?",
+        "q": "Where would you most like me to dress you next?",
         "multi": false,
         "options": [
-          "Hot pink accent",
-          "A deep autumn shade, like burgundy or forest",
-          "Keep the outfit neutral for now"
+          "Work or recruiting",
+          "Everyday city errands",
+          "Dinner or a social occasion",
+          "Travel",
+          "A quick gym walk"
         ],
         "id": "f20261026-3-1"
       }
@@ -177,91 +211,91 @@
     }
   ],
   "aesthetic": {
-    "summary": "Polished city classic with an off-duty prep streak and a softer romantic note: clean coats and cropped jackets, crisp knits, tailored bottoms, and structured bags, with one playful color or feminine detail. The overall feel is composed and wearable\u2014not fussy\u2014with the floral wrap dress as the board\u2019\u2026",
+    "summary": "Polished city classic with a preppy, off-duty edge: crisp layers, clean tailoring and practical flats, with a playful red or softly romantic detail. The through-line is structure and polish; the softer floral look feels like an occasional romantic variation rather than the everyday uniform.",
     "archetypes": [
       {
         "name": "Classic",
         "weight": 55,
-        "why": "The long tailored coat, neat trousers, button-front jacket, striped knit, and structured bags make clean, timeless polish the foundation."
+        "why": "The trench, neat jacket, crisp shirt, straight trousers and structured bags give the board its timeless, composed foundation."
       },
       {
         "name": "Elegant Chic",
         "weight": 30,
-        "why": "Long, streamlined layers and restrained accessories keep the outfits sleek and city-ready."
+        "why": "Long, clean lines and refined neutral layering\u2014especially the camel trench over dark tailoring\u2014bring a sleek city finish."
       },
       {
         "name": "Romantic",
         "weight": 15,
-        "why": "The wrap silhouette, soft drape, and delicate floral print add a gentle feminine accent."
+        "why": "The wrap silhouette, floral midi and soft cardigan add one fluid, feminine counterpoint to the sharper looks."
       }
     ],
     "vibe_words": [
       "polished",
       "city chic",
-      "off-duty prep",
+      "preppy",
       "minimal",
       "tailored",
-      "softly feminine",
-      "quietly confident"
+      "softly romantic"
     ],
     "colors": [
       {
-        "name": "Camel",
-        "hex": "#B49A7B"
+        "name": "Warm cream",
+        "hex": "#F2EBDD"
       },
       {
-        "name": "Warm ivory",
-        "hex": "#F1E9DD"
+        "name": "Camel",
+        "hex": "#B89570"
       },
       {
         "name": "Deep navy",
-        "hex": "#171A2A"
+        "hex": "#171A2B"
       },
       {
         "name": "Burgundy",
-        "hex": "#4B1827"
+        "hex": "#542331"
       },
       {
         "name": "Tomato red",
-        "hex": "#C83232"
+        "hex": "#B8322B"
       },
       {
-        "name": "Soft rose",
-        "hex": "#D5A6A4"
+        "name": "Dusty rose",
+        "hex": "#CDA6A0"
       }
     ],
     "signature_pieces": [
-      "Camel longline trench or coat",
-      "Dark tailored straight-leg trousers",
-      "Cropped dark jacket",
-      "Cream fine-knit or crisp shirt",
-      "Navy-and-cream striped knit",
-      "Wrap midi dress with a subtle floral",
-      "Structured top-handle bag",
-      "Simple gold necklace"
+      "Camel trench coat",
+      "Cropped tailored jacket",
+      "Crisp white or cream shirt",
+      "Fine striped knit top",
+      "Straight tailored trousers",
+      "A-line mini skirt",
+      "Wrap midi dress",
+      "Structured top-handle bag"
     ],
     "styling_moves": [
-      "Layer a long, open coat over a neat, tucked-in knit and straight trousers for a long, clean line.",
-      "Keep the base restrained\u2014cream with navy or warm charcoal\u2014then add one deliberate color accent.",
-      "Pair a cropped jacket with a higher-waisted skirt or trouser to define the waist and balance proportions.",
-      "Use a wrap tie or softly draped dress for the romantic note, keeping jewelry and bag simple.",
-      "Finish with polished, walkable shoes; choose a rounded or almond toe rather than the pointed shapes shown."
+      "Layer a crisp shirt or fine knit under a clean, slightly cropped jacket.",
+      "Use the trench as a long, polished top layer over a simple tonal outfit.",
+      "Balance a shorter skirt with a neat jacket and understated accessories.",
+      "Define the waist on a wrap dress, then soften the line with a fine cardigan.",
+      "Keep accessories edited: one structured bag and a small gold detail.",
+      "For your coloring, keep the board's color-blocking but use warm cream, deep navy and a rich red rather than icy white o\u2026"
     ],
-    "season_note": "Keep the board\u2019s silhouettes, but shift the pale pink floral look toward your Deep Autumn palette: try a warm cream ground with burgundy, forest, or burnt-orange florals, and choose espresso or bronze accessories. Camel, cream, and deep na\u2026",
-    "user_note": "This board feels very close to your polished Classic foundation: the camel coat, dark tailored line, and structured bags are especially aligned, while the striped knit adds that easy prep note. I\u2019d keep the clean shapes and the occasional soft wrap detail, but translate the pale pinks into richer Deep Autumn shades and keep footwear rounded, comfortable, and walkable.",
+    "season_note": "Keep the silhouettes and warm neutrals, but translate the board's bright red into tomato or burgundy, and its pale floral look into cream with deeper rose, aubergine or forest accents. Choose warm cream rather than stark white and favor gold or bronze details; keep dusty pink away from the face.",
+    "user_note": "This board is very much in your Classic-with-Elegant-Chic lane: polished layers, clean tailoring and practical-looking flats, with just enough playful color to keep it from feeling too serious. I\u2019ll keep that sharp city foundation in rotation and treat the floral wrap look as a softer Romantic option, translated into your richer Deep Autumn palette.",
     "pictures": [
       {
-        "file": "a-fc7fbeb68e.jpg",
+        "file": "a-e5861f9914.jpg",
         "source": "your photos",
         "at": "2026-10-26"
       },
       {
-        "file": "a-c4592e63ff.jpg",
+        "file": "a-e058131c2f.jpg",
         "source": "your photos",
         "at": "2026-10-26"
       },
       {
-        "file": "a-0538142cbe.jpg",
+        "file": "a-86796596d1.jpg",
         "source": "your photos",
         "at": "2026-10-26"
       }

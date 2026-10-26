@@ -5,7 +5,7 @@
       "plan": {
         "headline": "Warm layers, clean tailoring, and one playful dinner note",
         "stylist_take": "Classic structure leads the campus and recruiting hours, anchored by your loved cream blouse and black trousers. Camel warms the cold starts; the pink satin skirt is one intentional Romantic push for dinner, styled down rather than dressed up.",
-        "weather_note": "The walk to spin feels near 28\u00b0F, then it warms into the upper 60s before cooling to the mid-50s at dinner. Keep the trench removable; rain is unlikely.",
+        "weather_note": "The walk to spin feels near 28°F, then it warms into the upper 60s before cooling to the mid-50s at dinner. Keep the trench removable; rain is unlikely.",
         "blocks": [
           {
             "start": "07:00",
@@ -455,7 +455,7 @@
               "c-trench-camel"
             ],
             "change_note": "Change after spin. Wear the trench for the cool morning and take it off as the day warms.",
-            "why": "Your loved silk blouse, wide-leg trousers, and blazer are the polished Classic foundation; the wide-toe cognac boots are the closet's walkable polished shoe option. There is no matching structured bag in the closet for these boots, so I\u2019m leaving the black leather tote out rather than mixing leather families.",
+            "why": "Your loved silk blouse, wide-leg trousers, and blazer are the polished Classic foundation; the wide-toe cognac boots are the closet's walkable polished shoe option. There is no matching structured bag in the closet for these boots, so I’m leaving the black leather tote out rather than mixing leather families.",
             "stylist_note": "Keep the blouse neatly tucked and the blazer open for a long, clean line; the camel trench brings warmth without competing with the tailoring.",
             "alternates": [],
             "items": [
@@ -610,7 +610,7 @@
               "c-trench-camel",
               "c-boot-brown"
             ],
-            "change_note": "Change before dinner if you\u2019d like a fresh look; keep the trench for the cool walk.",
+            "change_note": "Change before dinner if you’d like a fresh look; keep the trench for the cool walk.",
             "why": "The knit midi is an easy elevated-casual base, and the camel trench with cognac boots gives it a warm, coordinated fall finish.",
             "stylist_note": "The open trench adds the long Classic line; the boots keep the dress grounded and walkable.",
             "alternates": [
@@ -946,7 +946,7 @@
         "verdict": "revise",
         "issues": [
           "The class/recruiting look pairs cognac boots with the black-and-cream tailoring, and the dinner look also uses the brown boots where the check requires black shoes. There is no suitable black shoe in this closet: the black loafers are a hard no because they pinch, so do not substitute them. Rework the looks around an eligible shoe or source a comfortable, wide-toe black option before recommending them.",
-          "The \u201cCamel knit polish\u201d alternate repeats the brown-boot pairing with black tailoring and should be removed or corrected."
+          "The “Camel knit polish” alternate repeats the brown-boot pairing with black tailoring and should be removed or corrected."
         ],
         "scores": {
           "weather": 4,
@@ -955,7 +955,7 @@
           "style": 2,
           "truth": 5
         },
-        "user_note": "The layers suit the cold start and warmer afternoon, and the tailoring is right for the recruiter chat. I can\u2019t approve the shoe pairings as shown: the boots clash with the black tailoring, while the loafers you own aren\u2019t comfortable enough to recommend.",
+        "user_note": "The layers suit the cold start and warmer afternoon, and the tailoring is right for the recruiter chat. I can’t approve the shoe pairings as shown: the boots clash with the black tailoring, while the loafers you own aren’t comfortable enough to recommend.",
         "drop_alternates": [
           "Camel knit polish"
         ]
@@ -1070,6 +1070,1343 @@
         "bans": "db50c5185ff0",
         "events": "deb16d6833cd",
         "weather": "1ef411329470"
+      }
+    },
+    "2026-10-27": {
+      "plan": {
+        "headline": "Tailored layers for a brisk city day, with one polished change after campus.",
+        "stylist_take": "Classic tailoring sets the line, with Elegant Chic in the silk blouse, wide-leg trousers and long trench. I’d keep the recruiter-to-dinner look composed and walkable; the closet’s only hot-pink piece is a satin skirt, which I’m not forcing into a cold, breezy campus day.",
+        "weather_note": "Overcast and breezy, with a 40–55°F range and little chance of rain. It feels near freezing on the early walk, so wear the removable half-zip to spin and the trench outdoors later; take outer layers off inside.",
+        "blocks": [
+          {
+            "start": "06:30",
+            "end": "08:00",
+            "label": "Spin class",
+            "scene": "gym",
+            "events": [
+              "Spin class, 07:00–08:00"
+            ],
+            "item_ids": [
+              "c-sportsbra-pink",
+              "c-legging-black",
+              "c-zip-grey",
+              "c-runner-pink"
+            ],
+            "change_note": "Wear the half-zip for the chilly walk in, remove it as you warm up, and change into campus clothes after class.",
+            "why": "The sports bra, leggings and wide-toe running shoes are spin-ready, while the half-zip gives you a removable layer for the cold start.",
+            "stylist_note": "A practical sporty-chic start; the pink trainers make the gym look feel lively without adding a bulky coat.",
+            "alternates": [
+              {
+                "title": "More coverage",
+                "item_ids": [
+                  "c-tee-white",
+                  "c-legging-black",
+                  "c-zip-grey",
+                  "c-runner-pink"
+                ],
+                "why": "The tee under the removable half-zip adds coverage for the walk and still works for spin.",
+                "items": [
+                  {
+                    "id": "c-tee-white",
+                    "name": "White crew tee",
+                    "category": "top",
+                    "subtype": "tee",
+                    "colors": [
+                      {
+                        "name": "white",
+                        "hex": "#f4f2ee"
+                      }
+                    ],
+                    "pattern": "solid",
+                    "fabric": "cotton",
+                    "formality": 2,
+                    "warmth": 1,
+                    "seasons": [
+                      "spring",
+                      "summer",
+                      "fall",
+                      "winter"
+                    ],
+                    "fit": "regular",
+                    "length": "regular",
+                    "comfort": 4,
+                    "image": null,
+                    "notes": ""
+                  },
+                  {
+                    "id": "c-legging-black",
+                    "name": "Black high-rise leggings",
+                    "category": "activewear",
+                    "subtype": "leggings",
+                    "colors": [
+                      {
+                        "name": "black",
+                        "hex": "#0f0f0f"
+                      }
+                    ],
+                    "pattern": "solid",
+                    "fabric": "nylon spandex",
+                    "formality": 1,
+                    "warmth": 2,
+                    "seasons": [
+                      "spring",
+                      "summer",
+                      "fall",
+                      "winter"
+                    ],
+                    "fit": "slim",
+                    "length": "long",
+                    "comfort": 5,
+                    "image": null,
+                    "notes": ""
+                  },
+                  {
+                    "id": "c-zip-grey",
+                    "name": "Grey half-zip pullover",
+                    "category": "activewear",
+                    "subtype": "pullover",
+                    "colors": [
+                      {
+                        "name": "heather grey",
+                        "hex": "#9b9ea3"
+                      }
+                    ],
+                    "pattern": "solid",
+                    "fabric": "fleece",
+                    "formality": 1,
+                    "warmth": 3,
+                    "seasons": [
+                      "fall",
+                      "winter",
+                      "spring"
+                    ],
+                    "fit": "regular",
+                    "length": "regular",
+                    "comfort": 5,
+                    "image": null,
+                    "notes": ""
+                  },
+                  {
+                    "id": "c-runner-pink",
+                    "name": "Pink running shoes (wide)",
+                    "category": "shoes",
+                    "subtype": "running",
+                    "colors": [
+                      {
+                        "name": "pink",
+                        "hex": "#ef5a9c"
+                      }
+                    ],
+                    "pattern": "solid",
+                    "fabric": "cotton",
+                    "formality": 1,
+                    "warmth": 2,
+                    "seasons": [
+                      "spring",
+                      "summer",
+                      "fall",
+                      "winter"
+                    ],
+                    "fit": "regular",
+                    "length": "regular",
+                    "comfort": 5,
+                    "image": null,
+                    "notes": "",
+                    "toe_box": "wide",
+                    "heel_in": 1.2,
+                    "walkable": true,
+                    "size_label": "11W"
+                  }
+                ]
+              },
+              {
+                "title": "Sporty minimal",
+                "item_ids": [
+                  "c-tee-black",
+                  "c-legging-black",
+                  "c-zip-grey",
+                  "c-runner-pink"
+                ],
+                "why": "The black tee keeps the workout base simple, and the half-zip is easy to take off once you warm up.",
+                "items": [
+                  {
+                    "id": "c-tee-black",
+                    "name": "Black fitted tee",
+                    "category": "top",
+                    "subtype": "tee",
+                    "colors": [
+                      {
+                        "name": "black",
+                        "hex": "#151515"
+                      }
+                    ],
+                    "pattern": "solid",
+                    "fabric": "cotton",
+                    "formality": 2,
+                    "warmth": 1,
+                    "seasons": [
+                      "spring",
+                      "summer",
+                      "fall",
+                      "winter"
+                    ],
+                    "fit": "slim",
+                    "length": "regular",
+                    "comfort": 4,
+                    "image": null,
+                    "notes": ""
+                  },
+                  {
+                    "id": "c-legging-black",
+                    "name": "Black high-rise leggings",
+                    "category": "activewear",
+                    "subtype": "leggings",
+                    "colors": [
+                      {
+                        "name": "black",
+                        "hex": "#0f0f0f"
+                      }
+                    ],
+                    "pattern": "solid",
+                    "fabric": "nylon spandex",
+                    "formality": 1,
+                    "warmth": 2,
+                    "seasons": [
+                      "spring",
+                      "summer",
+                      "fall",
+                      "winter"
+                    ],
+                    "fit": "slim",
+                    "length": "long",
+                    "comfort": 5,
+                    "image": null,
+                    "notes": ""
+                  },
+                  {
+                    "id": "c-zip-grey",
+                    "name": "Grey half-zip pullover",
+                    "category": "activewear",
+                    "subtype": "pullover",
+                    "colors": [
+                      {
+                        "name": "heather grey",
+                        "hex": "#9b9ea3"
+                      }
+                    ],
+                    "pattern": "solid",
+                    "fabric": "fleece",
+                    "formality": 1,
+                    "warmth": 3,
+                    "seasons": [
+                      "fall",
+                      "winter",
+                      "spring"
+                    ],
+                    "fit": "regular",
+                    "length": "regular",
+                    "comfort": 5,
+                    "image": null,
+                    "notes": ""
+                  },
+                  {
+                    "id": "c-runner-pink",
+                    "name": "Pink running shoes (wide)",
+                    "category": "shoes",
+                    "subtype": "running",
+                    "colors": [
+                      {
+                        "name": "pink",
+                        "hex": "#ef5a9c"
+                      }
+                    ],
+                    "pattern": "solid",
+                    "fabric": "cotton",
+                    "formality": 1,
+                    "warmth": 2,
+                    "seasons": [
+                      "spring",
+                      "summer",
+                      "fall",
+                      "winter"
+                    ],
+                    "fit": "regular",
+                    "length": "regular",
+                    "comfort": 5,
+                    "image": null,
+                    "notes": "",
+                    "toe_box": "wide",
+                    "heel_in": 1.2,
+                    "walkable": true,
+                    "size_label": "11W"
+                  }
+                ]
+              }
+            ],
+            "items": [
+              {
+                "id": "c-sportsbra-pink",
+                "name": "Pink sports bra",
+                "category": "activewear",
+                "subtype": "sports_bra",
+                "colors": [
+                  {
+                    "name": "pink",
+                    "hex": "#f06aa6"
+                  }
+                ],
+                "pattern": "solid",
+                "fabric": "nylon spandex",
+                "formality": 1,
+                "warmth": 1,
+                "seasons": [
+                  "spring",
+                  "summer",
+                  "fall",
+                  "winter"
+                ],
+                "fit": "regular",
+                "length": "regular",
+                "comfort": 4,
+                "image": null,
+                "notes": ""
+              },
+              {
+                "id": "c-legging-black",
+                "name": "Black high-rise leggings",
+                "category": "activewear",
+                "subtype": "leggings",
+                "colors": [
+                  {
+                    "name": "black",
+                    "hex": "#0f0f0f"
+                  }
+                ],
+                "pattern": "solid",
+                "fabric": "nylon spandex",
+                "formality": 1,
+                "warmth": 2,
+                "seasons": [
+                  "spring",
+                  "summer",
+                  "fall",
+                  "winter"
+                ],
+                "fit": "slim",
+                "length": "long",
+                "comfort": 5,
+                "image": null,
+                "notes": ""
+              },
+              {
+                "id": "c-zip-grey",
+                "name": "Grey half-zip pullover",
+                "category": "activewear",
+                "subtype": "pullover",
+                "colors": [
+                  {
+                    "name": "heather grey",
+                    "hex": "#9b9ea3"
+                  }
+                ],
+                "pattern": "solid",
+                "fabric": "fleece",
+                "formality": 1,
+                "warmth": 3,
+                "seasons": [
+                  "fall",
+                  "winter",
+                  "spring"
+                ],
+                "fit": "regular",
+                "length": "regular",
+                "comfort": 5,
+                "image": null,
+                "notes": ""
+              },
+              {
+                "id": "c-runner-pink",
+                "name": "Pink running shoes (wide)",
+                "category": "shoes",
+                "subtype": "running",
+                "colors": [
+                  {
+                    "name": "pink",
+                    "hex": "#ef5a9c"
+                  }
+                ],
+                "pattern": "solid",
+                "fabric": "cotton",
+                "formality": 1,
+                "warmth": 2,
+                "seasons": [
+                  "spring",
+                  "summer",
+                  "fall",
+                  "winter"
+                ],
+                "fit": "regular",
+                "length": "regular",
+                "comfort": 5,
+                "image": null,
+                "notes": "",
+                "toe_box": "wide",
+                "heel_in": 1.2,
+                "walkable": true,
+                "size_label": "11W"
+              }
+            ]
+          },
+          {
+            "start": "09:30",
+            "end": "14:00",
+            "label": "Class and campus lunch",
+            "scene": "classroom",
+            "events": [
+              "MGT 409 AI Foundations for Managers, 10:10–11:30",
+              "Consulting Club lunch & learn, 12:00–13:00"
+            ],
+            "item_ids": [
+              "c-blouse-cream",
+              "c-trouser-black",
+              "c-blazer-black",
+              "c-trench-camel",
+              "c-sneaker-white",
+              "c-bag-black"
+            ],
+            "change_note": "Change after spin; wear the trench outdoors and take it off indoors.",
+            "why": "Your loved cream blouse, black trousers and blazer feel polished for class and lunch, while the walkable sneakers suit campus; the trench handles the chilly walks.",
+            "stylist_note": "This is your Classic foundation with an Elegant Chic finish; keep the blouse crisp and let the trench soften the tailored lines.",
+            "alternates": [
+              {
+                "title": "Warm campus ease",
+                "item_ids": [
+                  "c-sweater-camel",
+                  "c-jean-dark",
+                  "c-trench-camel",
+                  "c-sneaker-white",
+                  "c-bag-black"
+                ],
+                "why": "The camel knit and dark denim make a comfortable off-duty prep look, with the trench for the cold walks.",
+                "items": [
+                  {
+                    "id": "c-sweater-camel",
+                    "name": "Camel crewneck sweater",
+                    "category": "top",
+                    "subtype": "sweater",
+                    "colors": [
+                      {
+                        "name": "camel",
+                        "hex": "#b98b58"
+                      }
+                    ],
+                    "pattern": "solid",
+                    "fabric": "cashmere blend",
+                    "formality": 3,
+                    "warmth": 3,
+                    "seasons": [
+                      "fall",
+                      "winter",
+                      "spring"
+                    ],
+                    "fit": "regular",
+                    "length": "regular",
+                    "comfort": 4,
+                    "image": null,
+                    "notes": ""
+                  },
+                  {
+                    "id": "c-jean-dark",
+                    "name": "Dark wash straight jeans",
+                    "category": "bottom",
+                    "subtype": "jeans",
+                    "colors": [
+                      {
+                        "name": "dark denim",
+                        "hex": "#26364f"
+                      }
+                    ],
+                    "pattern": "solid",
+                    "fabric": "denim",
+                    "formality": 2,
+                    "warmth": 2,
+                    "seasons": [
+                      "spring",
+                      "summer",
+                      "fall",
+                      "winter"
+                    ],
+                    "fit": "regular",
+                    "length": "long",
+                    "comfort": 4,
+                    "image": null,
+                    "notes": ""
+                  },
+                  {
+                    "id": "c-trench-camel",
+                    "name": "Camel trench coat",
+                    "category": "outerwear",
+                    "subtype": "coat",
+                    "colors": [
+                      {
+                        "name": "camel",
+                        "hex": "#c09a68"
+                      }
+                    ],
+                    "pattern": "solid",
+                    "fabric": "cotton gabardine",
+                    "formality": 4,
+                    "warmth": 3,
+                    "seasons": [
+                      "fall",
+                      "spring"
+                    ],
+                    "fit": "regular",
+                    "length": "long",
+                    "comfort": 4,
+                    "image": null,
+                    "notes": ""
+                  },
+                  {
+                    "id": "c-sneaker-white",
+                    "name": "White leather sneakers",
+                    "category": "shoes",
+                    "subtype": "sneakers",
+                    "colors": [
+                      {
+                        "name": "white",
+                        "hex": "#f2f2f2"
+                      }
+                    ],
+                    "pattern": "solid",
+                    "fabric": "cotton",
+                    "formality": 2,
+                    "warmth": 2,
+                    "seasons": [
+                      "spring",
+                      "summer",
+                      "fall",
+                      "winter"
+                    ],
+                    "fit": "regular",
+                    "length": "regular",
+                    "comfort": 4,
+                    "image": null,
+                    "notes": "",
+                    "toe_box": "regular",
+                    "heel_in": 1.0,
+                    "walkable": true,
+                    "size_label": "11"
+                  },
+                  {
+                    "id": "c-bag-black",
+                    "name": "Black leather tote",
+                    "category": "accessory",
+                    "subtype": "bag",
+                    "colors": [
+                      {
+                        "name": "black",
+                        "hex": "#121212"
+                      }
+                    ],
+                    "pattern": "solid",
+                    "fabric": "cotton",
+                    "formality": 4,
+                    "warmth": 1,
+                    "seasons": [
+                      "spring",
+                      "summer",
+                      "fall",
+                      "winter"
+                    ],
+                    "fit": "regular",
+                    "length": "regular",
+                    "comfort": 4,
+                    "image": null,
+                    "notes": ""
+                  }
+                ]
+              },
+              {
+                "title": "Clean contrast",
+                "item_ids": [
+                  "c-turtle-black",
+                  "c-trouser-cream",
+                  "c-blazer-black",
+                  "c-trench-camel",
+                  "c-sneaker-white",
+                  "c-bag-black"
+                ],
+                "why": "The black knit and cream trousers keep the look tailored and comfortable, while the removable trench adds warmth outside.",
+                "items": [
+                  {
+                    "id": "c-turtle-black",
+                    "name": "Black ribbed turtleneck",
+                    "category": "top",
+                    "subtype": "sweater",
+                    "colors": [
+                      {
+                        "name": "black",
+                        "hex": "#1a1a1a"
+                      }
+                    ],
+                    "pattern": "solid",
+                    "fabric": "merino",
+                    "formality": 3,
+                    "warmth": 3,
+                    "seasons": [
+                      "fall",
+                      "winter",
+                      "spring"
+                    ],
+                    "fit": "slim",
+                    "length": "regular",
+                    "comfort": 4,
+                    "image": null,
+                    "notes": ""
+                  },
+                  {
+                    "id": "c-trouser-cream",
+                    "name": "Cream pleated trousers",
+                    "category": "bottom",
+                    "subtype": "trousers",
+                    "colors": [
+                      {
+                        "name": "cream",
+                        "hex": "#ece2cf"
+                      }
+                    ],
+                    "pattern": "solid",
+                    "fabric": "cotton",
+                    "formality": 4,
+                    "warmth": 2,
+                    "seasons": [
+                      "spring",
+                      "summer",
+                      "fall"
+                    ],
+                    "fit": "relaxed",
+                    "length": "long",
+                    "comfort": 4,
+                    "image": null,
+                    "notes": ""
+                  },
+                  {
+                    "id": "c-blazer-black",
+                    "name": "Black tailored blazer",
+                    "category": "outerwear",
+                    "subtype": "blazer",
+                    "colors": [
+                      {
+                        "name": "black",
+                        "hex": "#141414"
+                      }
+                    ],
+                    "pattern": "solid",
+                    "fabric": "wool blend",
+                    "formality": 5,
+                    "warmth": 2,
+                    "seasons": [
+                      "spring",
+                      "summer",
+                      "fall",
+                      "winter"
+                    ],
+                    "fit": "regular",
+                    "length": "regular",
+                    "comfort": 3,
+                    "image": null,
+                    "notes": ""
+                  },
+                  {
+                    "id": "c-trench-camel",
+                    "name": "Camel trench coat",
+                    "category": "outerwear",
+                    "subtype": "coat",
+                    "colors": [
+                      {
+                        "name": "camel",
+                        "hex": "#c09a68"
+                      }
+                    ],
+                    "pattern": "solid",
+                    "fabric": "cotton gabardine",
+                    "formality": 4,
+                    "warmth": 3,
+                    "seasons": [
+                      "fall",
+                      "spring"
+                    ],
+                    "fit": "regular",
+                    "length": "long",
+                    "comfort": 4,
+                    "image": null,
+                    "notes": ""
+                  },
+                  {
+                    "id": "c-sneaker-white",
+                    "name": "White leather sneakers",
+                    "category": "shoes",
+                    "subtype": "sneakers",
+                    "colors": [
+                      {
+                        "name": "white",
+                        "hex": "#f2f2f2"
+                      }
+                    ],
+                    "pattern": "solid",
+                    "fabric": "cotton",
+                    "formality": 2,
+                    "warmth": 2,
+                    "seasons": [
+                      "spring",
+                      "summer",
+                      "fall",
+                      "winter"
+                    ],
+                    "fit": "regular",
+                    "length": "regular",
+                    "comfort": 4,
+                    "image": null,
+                    "notes": "",
+                    "toe_box": "regular",
+                    "heel_in": 1.0,
+                    "walkable": true,
+                    "size_label": "11"
+                  },
+                  {
+                    "id": "c-bag-black",
+                    "name": "Black leather tote",
+                    "category": "accessory",
+                    "subtype": "bag",
+                    "colors": [
+                      {
+                        "name": "black",
+                        "hex": "#121212"
+                      }
+                    ],
+                    "pattern": "solid",
+                    "fabric": "cotton",
+                    "formality": 4,
+                    "warmth": 1,
+                    "seasons": [
+                      "spring",
+                      "summer",
+                      "fall",
+                      "winter"
+                    ],
+                    "fit": "regular",
+                    "length": "regular",
+                    "comfort": 4,
+                    "image": null,
+                    "notes": ""
+                  }
+                ]
+              }
+            ],
+            "items": [
+              {
+                "id": "c-blouse-cream",
+                "name": "Cream silk blouse",
+                "category": "top",
+                "subtype": "blouse",
+                "colors": [
+                  {
+                    "name": "cream",
+                    "hex": "#efe4cf"
+                  }
+                ],
+                "pattern": "solid",
+                "fabric": "silk",
+                "formality": 4,
+                "warmth": 1,
+                "seasons": [
+                  "spring",
+                  "summer",
+                  "fall",
+                  "winter"
+                ],
+                "fit": "regular",
+                "length": "regular",
+                "comfort": 3,
+                "image": null,
+                "notes": ""
+              },
+              {
+                "id": "c-trouser-black",
+                "name": "Black wide-leg trousers",
+                "category": "bottom",
+                "subtype": "trousers",
+                "colors": [
+                  {
+                    "name": "black",
+                    "hex": "#121212"
+                  }
+                ],
+                "pattern": "solid",
+                "fabric": "crepe",
+                "formality": 4,
+                "warmth": 2,
+                "seasons": [
+                  "spring",
+                  "summer",
+                  "fall",
+                  "winter"
+                ],
+                "fit": "relaxed",
+                "length": "long",
+                "comfort": 5,
+                "image": null,
+                "notes": ""
+              },
+              {
+                "id": "c-blazer-black",
+                "name": "Black tailored blazer",
+                "category": "outerwear",
+                "subtype": "blazer",
+                "colors": [
+                  {
+                    "name": "black",
+                    "hex": "#141414"
+                  }
+                ],
+                "pattern": "solid",
+                "fabric": "wool blend",
+                "formality": 5,
+                "warmth": 2,
+                "seasons": [
+                  "spring",
+                  "summer",
+                  "fall",
+                  "winter"
+                ],
+                "fit": "regular",
+                "length": "regular",
+                "comfort": 3,
+                "image": null,
+                "notes": ""
+              },
+              {
+                "id": "c-trench-camel",
+                "name": "Camel trench coat",
+                "category": "outerwear",
+                "subtype": "coat",
+                "colors": [
+                  {
+                    "name": "camel",
+                    "hex": "#c09a68"
+                  }
+                ],
+                "pattern": "solid",
+                "fabric": "cotton gabardine",
+                "formality": 4,
+                "warmth": 3,
+                "seasons": [
+                  "fall",
+                  "spring"
+                ],
+                "fit": "regular",
+                "length": "long",
+                "comfort": 4,
+                "image": null,
+                "notes": ""
+              },
+              {
+                "id": "c-sneaker-white",
+                "name": "White leather sneakers",
+                "category": "shoes",
+                "subtype": "sneakers",
+                "colors": [
+                  {
+                    "name": "white",
+                    "hex": "#f2f2f2"
+                  }
+                ],
+                "pattern": "solid",
+                "fabric": "cotton",
+                "formality": 2,
+                "warmth": 2,
+                "seasons": [
+                  "spring",
+                  "summer",
+                  "fall",
+                  "winter"
+                ],
+                "fit": "regular",
+                "length": "regular",
+                "comfort": 4,
+                "image": null,
+                "notes": "",
+                "toe_box": "regular",
+                "heel_in": 1.0,
+                "walkable": true,
+                "size_label": "11"
+              },
+              {
+                "id": "c-bag-black",
+                "name": "Black leather tote",
+                "category": "accessory",
+                "subtype": "bag",
+                "colors": [
+                  {
+                    "name": "black",
+                    "hex": "#121212"
+                  }
+                ],
+                "pattern": "solid",
+                "fabric": "cotton",
+                "formality": 4,
+                "warmth": 1,
+                "seasons": [
+                  "spring",
+                  "summer",
+                  "fall",
+                  "winter"
+                ],
+                "fit": "regular",
+                "length": "regular",
+                "comfort": 4,
+                "image": null,
+                "notes": ""
+              }
+            ]
+          },
+          {
+            "start": "14:45",
+            "end": "20:00",
+            "label": "Recruiter coffee chat and dinner",
+            "scene": "coffee",
+            "events": [
+              "Coffee chat with Jordan (Deloitte), 15:00–15:45",
+              "Dinner with friends, 18:30–20:00"
+            ],
+            "item_ids": [
+              "c-blouse-cream",
+              "c-trouser-black",
+              "c-blazer-black",
+              "c-trench-camel",
+              "c-boot-brown"
+            ],
+            "change_note": "Change before the coffee chat and keep this look through dinner; wear the trench outdoors and remove it inside. Leave the black tote out so the cognac boots and camel outer layer stay in one warm leather family.",
+            "why": "The blouse, trousers and blazer are the polished combination you loved; cognac boots are a more appropriate recruiter-chat shoe than sneakers and are comfortable for walking.",
+            "stylist_note": "Let the cognac boots be a deliberate warm accent against the cream, black and camel; the sleek tailoring keeps the look recruiter-ready and dinner-appropriate.",
+            "alternates": [
+              {
+                "title": "Elegant knit-and-trouser",
+                "item_ids": [
+                  "c-sweater-camel",
+                  "c-trouser-cream",
+                  "c-blazer-black",
+                  "c-trench-camel",
+                  "c-boot-brown"
+                ],
+                "why": "The warm camel-and-cream base feels refined for coffee and dinner, with the blazer adding structure and the boots tying into the trench.",
+                "items": [
+                  {
+                    "id": "c-sweater-camel",
+                    "name": "Camel crewneck sweater",
+                    "category": "top",
+                    "subtype": "sweater",
+                    "colors": [
+                      {
+                        "name": "camel",
+                        "hex": "#b98b58"
+                      }
+                    ],
+                    "pattern": "solid",
+                    "fabric": "cashmere blend",
+                    "formality": 3,
+                    "warmth": 3,
+                    "seasons": [
+                      "fall",
+                      "winter",
+                      "spring"
+                    ],
+                    "fit": "regular",
+                    "length": "regular",
+                    "comfort": 4,
+                    "image": null,
+                    "notes": ""
+                  },
+                  {
+                    "id": "c-trouser-cream",
+                    "name": "Cream pleated trousers",
+                    "category": "bottom",
+                    "subtype": "trousers",
+                    "colors": [
+                      {
+                        "name": "cream",
+                        "hex": "#ece2cf"
+                      }
+                    ],
+                    "pattern": "solid",
+                    "fabric": "cotton",
+                    "formality": 4,
+                    "warmth": 2,
+                    "seasons": [
+                      "spring",
+                      "summer",
+                      "fall"
+                    ],
+                    "fit": "relaxed",
+                    "length": "long",
+                    "comfort": 4,
+                    "image": null,
+                    "notes": ""
+                  },
+                  {
+                    "id": "c-blazer-black",
+                    "name": "Black tailored blazer",
+                    "category": "outerwear",
+                    "subtype": "blazer",
+                    "colors": [
+                      {
+                        "name": "black",
+                        "hex": "#141414"
+                      }
+                    ],
+                    "pattern": "solid",
+                    "fabric": "wool blend",
+                    "formality": 5,
+                    "warmth": 2,
+                    "seasons": [
+                      "spring",
+                      "summer",
+                      "fall",
+                      "winter"
+                    ],
+                    "fit": "regular",
+                    "length": "regular",
+                    "comfort": 3,
+                    "image": null,
+                    "notes": ""
+                  },
+                  {
+                    "id": "c-trench-camel",
+                    "name": "Camel trench coat",
+                    "category": "outerwear",
+                    "subtype": "coat",
+                    "colors": [
+                      {
+                        "name": "camel",
+                        "hex": "#c09a68"
+                      }
+                    ],
+                    "pattern": "solid",
+                    "fabric": "cotton gabardine",
+                    "formality": 4,
+                    "warmth": 3,
+                    "seasons": [
+                      "fall",
+                      "spring"
+                    ],
+                    "fit": "regular",
+                    "length": "long",
+                    "comfort": 4,
+                    "image": null,
+                    "notes": ""
+                  },
+                  {
+                    "id": "c-boot-brown",
+                    "name": "Brown ankle boots, block heel",
+                    "category": "shoes",
+                    "subtype": "boots",
+                    "colors": [
+                      {
+                        "name": "cognac",
+                        "hex": "#8a4f2a"
+                      }
+                    ],
+                    "pattern": "solid",
+                    "fabric": "cotton",
+                    "formality": 3,
+                    "warmth": 4,
+                    "seasons": [
+                      "fall",
+                      "winter",
+                      "spring"
+                    ],
+                    "fit": "regular",
+                    "length": "regular",
+                    "comfort": 4,
+                    "image": null,
+                    "notes": "",
+                    "toe_box": "wide",
+                    "heel_in": 2.0,
+                    "walkable": true,
+                    "size_label": "11W"
+                  }
+                ]
+              }
+            ],
+            "items": [
+              {
+                "id": "c-blouse-cream",
+                "name": "Cream silk blouse",
+                "category": "top",
+                "subtype": "blouse",
+                "colors": [
+                  {
+                    "name": "cream",
+                    "hex": "#efe4cf"
+                  }
+                ],
+                "pattern": "solid",
+                "fabric": "silk",
+                "formality": 4,
+                "warmth": 1,
+                "seasons": [
+                  "spring",
+                  "summer",
+                  "fall",
+                  "winter"
+                ],
+                "fit": "regular",
+                "length": "regular",
+                "comfort": 3,
+                "image": null,
+                "notes": ""
+              },
+              {
+                "id": "c-trouser-black",
+                "name": "Black wide-leg trousers",
+                "category": "bottom",
+                "subtype": "trousers",
+                "colors": [
+                  {
+                    "name": "black",
+                    "hex": "#121212"
+                  }
+                ],
+                "pattern": "solid",
+                "fabric": "crepe",
+                "formality": 4,
+                "warmth": 2,
+                "seasons": [
+                  "spring",
+                  "summer",
+                  "fall",
+                  "winter"
+                ],
+                "fit": "relaxed",
+                "length": "long",
+                "comfort": 5,
+                "image": null,
+                "notes": ""
+              },
+              {
+                "id": "c-blazer-black",
+                "name": "Black tailored blazer",
+                "category": "outerwear",
+                "subtype": "blazer",
+                "colors": [
+                  {
+                    "name": "black",
+                    "hex": "#141414"
+                  }
+                ],
+                "pattern": "solid",
+                "fabric": "wool blend",
+                "formality": 5,
+                "warmth": 2,
+                "seasons": [
+                  "spring",
+                  "summer",
+                  "fall",
+                  "winter"
+                ],
+                "fit": "regular",
+                "length": "regular",
+                "comfort": 3,
+                "image": null,
+                "notes": ""
+              },
+              {
+                "id": "c-trench-camel",
+                "name": "Camel trench coat",
+                "category": "outerwear",
+                "subtype": "coat",
+                "colors": [
+                  {
+                    "name": "camel",
+                    "hex": "#c09a68"
+                  }
+                ],
+                "pattern": "solid",
+                "fabric": "cotton gabardine",
+                "formality": 4,
+                "warmth": 3,
+                "seasons": [
+                  "fall",
+                  "spring"
+                ],
+                "fit": "regular",
+                "length": "long",
+                "comfort": 4,
+                "image": null,
+                "notes": ""
+              },
+              {
+                "id": "c-boot-brown",
+                "name": "Brown ankle boots, block heel",
+                "category": "shoes",
+                "subtype": "boots",
+                "colors": [
+                  {
+                    "name": "cognac",
+                    "hex": "#8a4f2a"
+                  }
+                ],
+                "pattern": "solid",
+                "fabric": "cotton",
+                "formality": 3,
+                "warmth": 4,
+                "seasons": [
+                  "fall",
+                  "winter",
+                  "spring"
+                ],
+                "fit": "regular",
+                "length": "regular",
+                "comfort": 4,
+                "image": null,
+                "notes": "",
+                "toe_box": "wide",
+                "heel_in": 2.0,
+                "walkable": true,
+                "size_label": "11W"
+              }
+            ]
+          }
+        ]
+      },
+      "review": {
+        "verdict": "revise",
+        "issues": [
+          "For the recruiter-and-dinner block, replace the cognac boots as requested by the automatic check. The black loafers are a hard no, so use the walkable white sneakers and leave the black tote out rather than reintroducing the pinching loafers or mixing leather colors.",
+          "Add exactly one clearly titled “Push:” option and explain what bolder detail or archetype it tests. Keep it complete and suitable for the weather and event.",
+          "The plan barely uses the user’s Deep Autumn signature colors outside the gym look. Add a suitable closet color accent where practical, without forcing the hot-pink skirt into a cold day. "
+        ],
+        "scores": {
+          "weather": 4,
+          "dress_code": 4,
+          "comfort": 4,
+          "style": 3,
+          "truth": 5
+        },
+        "user_note": "I checked the brisk outdoor hours, walkability, event polish, and the closet’s hard no’s. The recruiter look needs a footwear fix, and the plan still needs its single clearly marked Push option.",
+        "drop_alternates": []
+      },
+      "weather": {
+        "date": "2026-10-27",
+        "source": "Open-Meteo forecast",
+        "summary": "overcast",
+        "high_f": 55,
+        "low_f": 40,
+        "rain_chance_pct": 3,
+        "wind_mph": 12,
+        "hourly": [
+          {
+            "hour": "06:00",
+            "temp_f": 43,
+            "feels_like_f": 35,
+            "rain_pct": 2
+          },
+          {
+            "hour": "08:00",
+            "temp_f": 41,
+            "feels_like_f": 32,
+            "rain_pct": 2
+          },
+          {
+            "hour": "10:00",
+            "temp_f": 46,
+            "feels_like_f": 37,
+            "rain_pct": 1
+          },
+          {
+            "hour": "12:00",
+            "temp_f": 51,
+            "feels_like_f": 42,
+            "rain_pct": 0
+          },
+          {
+            "hour": "14:00",
+            "temp_f": 54,
+            "feels_like_f": 46,
+            "rain_pct": 0
+          },
+          {
+            "hour": "16:00",
+            "temp_f": 55,
+            "feels_like_f": 47,
+            "rain_pct": 0
+          },
+          {
+            "hour": "18:00",
+            "temp_f": 50,
+            "feels_like_f": 42,
+            "rain_pct": 0
+          },
+          {
+            "hour": "20:00",
+            "temp_f": 44,
+            "feels_like_f": 37,
+            "rain_pct": 0
+          },
+          {
+            "hour": "22:00",
+            "temp_f": 41,
+            "feels_like_f": 34,
+            "rain_pct": 0
+          }
+        ]
+      },
+      "events": [
+        {
+          "start": "07:00",
+          "end": "08:00",
+          "title": "Spin class",
+          "location": "Payne Whitney Gym",
+          "notes": ""
+        },
+        {
+          "start": "10:10",
+          "end": "11:30",
+          "title": "MGT 409 AI Foundations for Managers",
+          "location": "Evans Hall 2200",
+          "notes": ""
+        },
+        {
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Consulting Club lunch & learn",
+          "location": "Evans Hall, Beinecke Terrace Room",
+          "notes": ""
+        },
+        {
+          "start": "15:00",
+          "end": "15:45",
+          "title": "Coffee chat with Jordan (Deloitte)",
+          "location": "Blue State Coffee, Wall St",
+          "notes": "Networking coffee chat about strategy consulting summer roles."
+        },
+        {
+          "start": "18:30",
+          "end": "20:00",
+          "title": "Dinner with friends",
+          "location": "Olea, New Haven",
+          "notes": ""
+        }
+      ],
+      "blocked": [],
+      "inputs": {
+        "closet": "9520c6b38f33",
+        "feedback": "12ae32cb1ec0",
+        "style": "5c243d945b95",
+        "bans": "db50c5185ff0",
+        "events": "deb16d6833cd",
+        "weather": "6fb318635ffd"
       }
     }
   },
