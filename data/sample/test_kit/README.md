@@ -34,7 +34,7 @@ The person in `fake_person_*.jpg`, the clothes in `clothes/` (except the pink sw
 
 ## Costs and heads-up
 
-- Text steps ≈ $0.001–0.004 each; a fresh plan ≈ $0.005–0.013 (30 s – 3½ min); live web shop ≈ $0.05–0.10.
+- Text steps ≈ $0.001–0.004 each; a fresh plan ≈ $0.005–0.013 (30 s – 4 min); live web shop ≈ $0.05–0.10.
 - Pictures need `OPENAI_API_KEY`: receipt product shots, mock-ups (≈ $0.19 for six), goal picture, try-on (≈ $0.02–0.07 each).
 - Once the body photo is in, Today makes **one automatic try-on photo per day** of the first look (≈ $0.07).
 - Every 3 notes refreshes Margaux-Sloan's read and goal picture (≈ $0.013).

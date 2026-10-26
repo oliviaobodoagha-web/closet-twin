@@ -61,7 +61,7 @@ Your browser opens **http://127.0.0.1:8000** (Windows: `.venv\Scripts\python run
 
 The app opens on the **Sample** data set: 22 closet items, a sample profile and stylist setup, a 17-product practice shop, and a sample day (spin class, MBA class, consulting lunch, a recruiter coffee chat, dinner).
 
-1. **Today → Plan my outfits.** Margaux-Sloan reads the calendar and live weather and dresses each part of the day. The first plan can take **30 s to 3½ min** (the critic can send it back up to twice); a repeat of the same day with the same closet and notes comes back instantly from the saved plan, with no model call. Open the trace to see the code checks and the critic. Each look has alternates, **♡ Love it / Not for me** and a **Tell Margaux-Sloan** box.
+1. **Today → Plan my outfits.** Margaux-Sloan reads the calendar and live weather and dresses each part of the day. The first plan can take **30 s to 4 min** (the critic can send it back up to twice); a repeat of the same day with the same closet and notes comes back instantly from the saved plan, with no model call. Open the trace to see the code checks and the critic. Each look has alternates, **♡ Love it / Not for me** and a **Tell Margaux-Sloan** box.
 2. **Today → Find what's missing.** Three pieces worth buying, each with a full outfit from your closet (text only, about $0.002). **Draw them** makes the mock-up pictures (about $0.19 for six, own key); nothing is drawn until you tap. **Shop this in my size** jumps to the Shop tab.
 3. **Shop.** Try *"polished flats for a coffee chat I can walk in"*. The practice catalog is free; tick **Search real stores in my size** for the live web (links are kept only if the search actually saw that page). A request that breaks one of your no's is answered right away, before any search.
 4. **Me.** The 5-step setup: face & colors (season), body (photo or sizes), style (aesthetic board and/or quiz, archetype pictures, then her read, goal look and strategy), wardrobe, week (calendar). Below it: your notes and house rules, each saying what it became (a hard rule checked in code, or guidance every styling agent reads).
@@ -179,7 +179,7 @@ tests/safety_tests.py  59 offline attack and malfunction checks
 - **Port 8000 is busy**: `PORT=8001 .venv/bin/python run.py` and open http://127.0.0.1:8001.
 - **A picture button asks for a key**: pictures need your own `OPENAI_API_KEY`.
 - **Weather says "seasonal estimate"**: the live forecast couldn't be reached, so the planner uses monthly normals.
-- **First plan feels slow**: 30 s to 3½ min is normal for a fresh plan with critic revisions; the same day again is instant.
+- **First plan feels slow**: 30 s to 4 min is normal for a fresh plan with critic revisions; the same day again is instant.
 
 ## Credits and open source
 
