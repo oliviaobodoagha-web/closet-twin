@@ -39,6 +39,13 @@
   .flow b { color: var(--burgundy); }
   .bar { display: flex; height: 34px; border-radius: 6px; overflow: hidden; font-size: .45em; color: #fff; margin: .3em 0 .2em; }
   .bar div { display: flex; align-items: center; padding: 0 .7em; white-space: nowrap; }
+  .steps { display: flex; align-items: stretch; gap: .25em; margin: .2em 0 .5em; }
+  .step { flex: 1; background: #fff; border: 1px solid var(--line); border-top: 4px solid var(--gold); border-radius: 8px; padding: .4em .45em; font-size: .5em; line-height: 1.35; }
+  .step b { display: block; color: var(--navy); font-size: 1.15em; margin-bottom: .2em; }
+  .step.stop { border-top-color: var(--burgundy); }
+  .arrow { align-self: center; color: var(--gold); font-size: .8em; }
+  .agent { font-size: .62em; line-height: 1.35; margin: .18em 0; }
+  .agent b { color: var(--navy); }
   .todo { background: #fff1c9; outline: 1px dashed #b8964e; }
   .reveal .progress { color: var(--gold); }
   .reveal .controls { color: var(--navy); }
@@ -53,196 +60,213 @@
     <div>
       <div class="kicker">MGT 409 · Final Project · Olivia Obodoagha</div>
       <h1>Closet Twin</h1>
-      <div class="tag">One AI stylist, Margaux-Sloan, who dresses me from my real closet for my real day, remembers what I say no to, and shops in my size.</div>
+      <div class="tag">A personal stylist, Margaux-Sloan, who dresses me from the clothes I already own, for the day I actually have, and shops for what's missing in my size.</div>
       <div class="plaid"></div>
       <ul>
-        <li>Calendar + live weather → one decided look per part of the day, with alternates</li>
-        <li>My style archetypes, color season and inspiration board shape every look</li>
-        <li>"Not for me" becomes a <b>hard rule checked in code</b>, so it never comes back</li>
-        <li>Finds the 3 pieces worth buying next, searches real stores in <b>12 wide</b>, shows a look on a photo of me</li>
-        <li><b>14 specialist agents</b> behind one voice; code checks every answer</li>
+        <li>Reads my calendar and the weather, then picks an outfit for each part of my day</li>
+        <li>Knows my style, my best colors and the looks I've saved for inspiration</li>
+        <li>When I say "not for me", she remembers it for good</li>
+        <li>Tells me the few pieces worth buying next, finds them in real stores in <b>size 12 wide</b>, and shows a look on a photo of me</li>
       </ul>
     </div>
     <div>
       <img class="shot" src="screenshots/personal/tryon_classroom.jpg" alt="photo try-on" style="height:560px" />
-      <p class="cap">A photo try-on of a planned look, on me.</p>
+      <p class="cap">A planned outfit, tried on a photo of me.</p>
     </div>
   </div>
 </section>
 
 <!-- 2. Problem -->
 <section>
-  <h2>The problem: getting dressed, and buying shoes that fit</h2>
+  <h2>The problem: shopping for clothes, then deciding what to wear</h2>
   <div class="rule"></div>
   <div class="cols3">
-    <div class="card"><div class="big">12–18 min<small>every morning choosing an outfit (UK surveys, ~2,000 women each); <b>105 min</b> for me on a real recruiting day</small></div></div>
-    <div class="card"><div class="big">24–31%<small>of online apparel orders are returned (Coresight 2023, ECDB 2026)</small></div></div>
-    <div class="card"><div class="big">53–70%<small>of those returns are about size and fit (Coresight, McKinsey)</small></div></div>
+    <div class="card"><div class="big">~35 min<small>a day for me, between shopping for clothes and choosing what to wear</small></div></div>
+    <div class="card"><div class="big">24–31%<small>of clothes bought online are sent back (Coresight 2023, ECDB 2026)</small></div></div>
+    <div class="card"><div class="big">53–70%<small>of those returns happen because the size or fit is wrong (Coresight, McKinsey)</small></div></div>
   </div>
-  <p style="font-size:.7em;margin-top:.8em"><b>Me:</b> a recruiting day holds a campus event, career office hours and consulting coffee chats, each with its own dress code, plus a cold walk. And I wear a <b>women's 12 wide</b>. "Available in 12" doesn't say "wide, polished, walkable all day"; that lives only in reviews. My last search took <b>about a week</b>.</p>
-  <p style="font-size:.7em"><b>What exists:</b> Alta does closet + daily outfits + shopping well. Reviewers of Alta, Daydream, Doppl, Indyx and ChatGPT-as-stylist keep saying the same things: <i>generic or random looks, ignores context and past dislikes, wrong links, no fit check.</i></p>
+  <p style="font-size:.7em;margin-top:.8em"><b>My day:</b> in recruiting season one day can hold a campus event, career office hours and coffee chats with consultants, each with its own dress code, plus a cold walk across campus.</p>
+  <p style="font-size:.7em"><b>My feet:</b> I wear a <b>women's 12 wide</b>. A store saying "available in 12" doesn't tell me it's wide, polished and comfortable enough to walk in all day. My last search for shoes like that took <b>about a week</b>.</p>
+  <p style="font-size:.7em"><b>What's out there:</b> apps like Alta, Daydream and ChatGPT can suggest outfits, but people say the looks feel random, ignore what they already said they dislike, and link to the wrong products.</p>
 </section>
 
 <!-- 3. What's new -->
 <section>
-  <h2>What's new: a stylist with a point of view, and rules in code</h2>
+  <h2>What's different: a stylist who actually listens</h2>
   <div style="display:grid;grid-template-columns:1fr 1.15fr;gap:.9em;align-items:start">
     <div>
-      <img class="shot" src="screenshots/stylist.png" alt="inspiration board and archetype tiles" style="height:300px;object-position:50% 56%" />
-      <img class="shot" src="screenshots/stylist_goal.png" alt="goal picture and strategy" style="height:185px;margin-top:.4em;object-position:left top" />
-      <p class="cap">Sample profile: her read of the inspiration board, archetypes shown as pictures, and the goal look + strategy she writes.</p>
+      <img class="shot" src="screenshots/stylist.png" alt="inspiration board and style tiles" style="height:300px;object-position:50% 56%" />
+      <img class="shot" src="screenshots/stylist_goal.png" alt="goal picture and plan" style="height:185px;margin-top:.4em;object-position:left top" />
+      <p class="cap">She explains styles with pictures, then sketches the look she's dressing you toward and how she'll get you there.</p>
     </div>
     <ul style="margin-top:0">
-      <li><b>One stylist, Margaux-Sloan:</b> archetype blend, color season, inspiration board, check-ins and house rules → a read of me (signature, goal picture, strategy) that every styling agent receives</li>
-      <li><b>"No" is enforced in code:</b> a Not for me, a Tell-box tag or a house rule becomes a <b>taste ban</b> ("men's-style loafers", while slim feminine loafers pass), checked on plans, alternates, picks, shop results and picture prompts</li>
-      <li><b>Stylist rules in code:</b> no two statement colors, no brown shoes under black-and-white, nothing casual on a recruiting day, no all-neutral day, no repeats in 14 days, nothing not in the closet</li>
-      <li><b>Fingerprints:</b> same inputs → the same saved pick, instantly, $0</li>
-      <li><b>Real links only:</b> a shop link is kept only if the web search really returned or opened that page</li>
-      <li><b>Pictures on tap, never by surprise</b>; a repeat picture is reused for $0</li>
+      <li><b>She gets to know you:</b> your style, your best colors and an inspiration board you share, so every outfit has a point of view</li>
+      <li><b>"No" means no:</b> if I say black loafers look too masculine on me, she never suggests them again, in outfits, shopping or pictures. The app checks every suggestion against my no's before I see it, so it doesn't depend on the AI remembering</li>
+      <li><b>She follows real styling rules:</b> no sneakers at a recruiting event, no brown shoes with a black-and-white outfit, no wearing the same look twice in two weeks, and only clothes I actually own</li>
+      <li><b>Same day, same answer:</b> if nothing changed, she shows the outfit she already picked, instantly and for free</li>
+      <li><b>Only real shopping links</b>, and pictures are made only when I ask for them</li>
     </ul>
   </div>
 </section>
 
 <!-- 4. Agents -->
 <section>
-  <h2>14 agents, one model, code in charge</h2>
+  <h2>Behind the scenes: a team of 14 AI helpers</h2>
   <div class="rule"></div>
-  <div class="cols4">
-    <div class="card"><h3>Styling (3)</h3><b>Day Planner</b> (calendar, weather)<br /><b>Style Critic</b> (revise ≤ 2×, best round kept)<br /><b>Wardrobe Recommender</b> (3 pieces + outfits → 6 mock-ups on tap)</div>
-    <div class="card"><h3>Shopping (2)</h3><b>Shopping Scout</b> (catalog or live web, never sees measurements)<br /><b>Fit Tailor</b> (size-chart math, never reads the web)<br />→ Style Critic → "revise" = 2nd search</div>
-    <div class="card"><h3>Closet intake (3)</h3><b>Orienter</b> → <b>Closet Cataloger</b><br /><b>Receipt Reader</b> (photo or PDF)<br />+ cutout, color words, size guess, dupes</div>
-    <div class="card"><h3>Style profile (6)</h3><b>Color Analyst</b> · <b>Body Estimator</b><br /><b>Style Analyst</b> · <b>Aesthetic Reader</b><br /><b>Stylist Read</b> · <b>Inspo Stylist</b></div>
+  <div class="cols" style="gap:1.2em">
+    <div>
+      <p class="agent" style="color:var(--gold);letter-spacing:.15em;text-transform:uppercase;font-size:.5em">Dressing me</p>
+      <p class="agent"><b>Day Planner</b> reads my calendar and weather and picks outfits for the day</p>
+      <p class="agent"><b>Style Critic</b> reviews every outfit and pick like a second opinion, and sends weak ones back</p>
+      <p class="agent"><b>Wardrobe Recommender</b> names the 3 pieces that would add the most new outfits</p>
+      <p class="agent" style="color:var(--gold);letter-spacing:.15em;text-transform:uppercase;font-size:.5em;margin-top:.6em">Shopping</p>
+      <p class="agent"><b>Shopping Scout</b> searches real stores for a piece in my size</p>
+      <p class="agent"><b>Fit Tailor</b> compares my measurements with the store's size chart</p>
+      <p class="agent" style="color:var(--gold);letter-spacing:.15em;text-transform:uppercase;font-size:.5em;margin-top:.6em">Adding clothes</p>
+      <p class="agent"><b>Orienter</b> and <b>Closet Cataloger</b> turn a photo or product link into a labeled closet item; <b>Receipt Reader</b> does the same from a receipt</p>
+    </div>
+    <div>
+      <p class="agent" style="color:var(--gold);letter-spacing:.15em;text-transform:uppercase;font-size:.5em">Learning my style</p>
+      <p class="agent"><b>Color Analyst</b> finds my best colors from a face photo</p>
+      <p class="agent"><b>Body Estimator</b> estimates my sizes from a full-length photo</p>
+      <p class="agent"><b>Style Analyst</b> matches me to style types (classic, romantic…)</p>
+      <p class="agent"><b>Aesthetic Reader</b> reads my inspiration board and says what it sees</p>
+      <p class="agent"><b>Stylist Read</b> writes Margaux-Sloan's summary of me: signature, goal look, plan</p>
+      <p class="agent"><b>Inspo Stylist</b> recreates a screenshot or Pinterest look from my closet</p>
+      <div class="note" style="margin-top:.7em">They never talk to me directly: I only hear Margaux-Sloan. Regular code, not another AI, decides who works when and double-checks their answers.</div>
+    </div>
   </div>
-  <div class="flow" style="margin-top:.6em">
-    <b>Orchestrator = plain code, not a boss LLM.</b> Before a call: fingerprint hit → saved result ($0) · ban pre-check on shop requests · ledger with budgets and a 14-call loop guard.
-    After each agent: grounding (closet IDs, seen links) · taste bans + house rules · <code>outfit_rules</code> (colors, dress code, season palette) · no-repeat → a failed check goes back to the agent. Then: best round kept, alternates validated, blocked pieces explained in her voice.
-  </div>
-  <ul style="margin-top:.5em">
-    <li><b>gpt-6-luna</b> for every text agent, strict JSON schemas; reasoning effort <b>medium</b> for the day plan and its Critic review, <b>low</b> everywhere else</li>
-    <li>Pictures: gpt-image-2.5-sunburst (mock-ups, goal picture, product shots, photo try-on, 360°), only on its own key</li>
-    <li>Why code coordinates: the flows are fixed, code checks are cheaper and testable, and specialists keep least privilege</li>
-  </ul>
 </section>
 
 <!-- 5. One real run -->
 <section>
-  <h2>One real run: code sends the plan back</h2>
+  <h2>Watching it plan one real day</h2>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:.9em;align-items:start">
     <div>
       <img class="shot" src="screenshots/today_plan.png" alt="day plan" style="height:300px" />
-      <img class="shot" src="screenshots/safety_trace.png" alt="trace: code sends the plan back" style="height:200px;margin-top:.4em;object-position:left top" />
+      <img class="shot" src="screenshots/safety_trace.png" alt="the step-by-step log of the run" style="height:200px;margin-top:.4em;object-position:left top" />
+      <p class="cap">The finished plan, and the step-by-step log the app shows after every run.</p>
     </div>
-    <div>
-      <ul style="margin-top:0">
-        <li>Sample closet, Tue Oct 27: spin class, MGT 409, club lunch, recruiter coffee chat, dinner</li>
-        <li>Run <code>{{PLAN_RUN_ID}}</code>: {{PLAN_COST}}</li>
-        <li>Each round, <b>code</b> sent the planner back (sneakers on a recruiting day, brown boots under black-and-white) and dropped alternates that broke the same rules, before the Critic saw them</li>
-        <li>The Critic still said <i>revise</i> after 2 revisions (the Sample's only black flats are banned), so the app showed the <b>best round</b> with her notes instead of looping</li>
-        <li>On my own closet (Oct 26, $0.0109, 158 s): approved in round 2, with my red satin blouse (Bright Winter) in the recruiting look</li>
-      </ul>
-      <p class="note">Every run shows its trace: bans checked, tool calls, each code check, the Critic's verdict, tokens and cost.</p>
+    <ol style="margin-top:0">
+      <li>The day: spin class, MGT 409, a club lunch, a coffee chat with a recruiter, then dinner (sample closet)</li>
+      <li>The Planner's outfits broke two styling rules: sneakers for the recruiter chat, and brown boots with black and white</li>
+      <li>The app caught both and sent the plan back to be redone before the Critic or I ever saw it</li>
+      <li>The Critic still wanted better shoes, but the only polished black flats in this closet were ones the owner had said pinch</li>
+      <li>So instead of looping forever, the app showed the best version with the Critic's note</li>
+    </ol>
     </div>
-  </div>
+  <p class="cap" style="margin-top:.4em">Whole run: {{PLAN_COST}}. On my own closet the same process approved a plan in two tries, with my red satin blouse for the recruiting part of the day.</p>
 </section>
 
 <!-- 6. Shopping -->
 <section>
-  <h2>Shopping in my size, with links that are real</h2>
-  <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:.9em;align-items:start">
-    <div>
-      <img class="shot" src="screenshots/shop_trace.png" alt="live shop with trace" style="height:250px" />
-      <img class="shot" src="screenshots/shop_trace.png" alt="live shop trace rows" style="height:235px;margin-top:.4em;object-position:50% 74%" />
-    </div>
+  <h2>Shopping: real stores, my size, links that work</h2>
+  <div class="rule"></div>
+  <div class="steps">
+    <div class="step stop"><b>1 · I ask</b>"Black ballet flats, 12 wide, under $80." If it breaks one of my no's, she says so right away, for free</div>
+    <div class="arrow">→</div>
+    <div class="step"><b>2 · Search</b>The Scout searches real stores the way a shopper would and opens the product pages</div>
+    <div class="arrow">→</div>
+    <div class="step"><b>3 · Link check</b>A link is kept only if the search actually visited that page. Made-up links are thrown out</div>
+    <div class="arrow">→</div>
+    <div class="step"><b>4 · Size check</b>The Fit Tailor compares my size with the store's chart and says if "12 W" is really listed</div>
+    <div class="arrow">→</div>
+    <div class="step"><b>5 · Second opinion</b>The Critic reviews the picks. Not good enough? One more search, using its notes</div>
+    <div class="arrow">→</div>
+    <div class="step stop"><b>6 · Picks</b>Up to 3 picks with a real link, price and size notes, and an honest "I couldn't confirm the width"</div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1.1fr;gap:.9em;align-items:start">
+    <img class="shot" src="screenshots/shop_trace.png" alt="a shopping pick" style="height:235px" />
     <ul style="margin-top:0">
-      <li><b>Find what's missing:</b> 3 pieces + an outfit each for $0.0015; <b>Draw them</b> = 6 mock-ups (~$0.18) only on a tap</li>
-      <li><b>Live shop:</b> shopper-style queries, size evidence ("12 W listed"), then Fit Tailor → Critic; a Critic <i>revise</i> triggers a second search that hears the Critic</li>
-      <li><b>Bug I found:</b> the app trusted only links the model cited, and it rarely cites in JSON, so 4 of 11 live shops lost real finds. Now every URL the search <b>returned or opened</b> is trusted and listed; unseen links are still dropped</li>
-      <li><b>Honest cards:</b> an unconfirmed size gets a grey note, never a green ✓; an unseen price says "Price at store"</li>
-      <li>A request that breaks a no ("pleated mini skirt" vs "never very short") is answered <b>before</b> any paid search, $0</li>
+      <li><b>A bug I found and fixed:</b> at first the app threw away good finds because the AI didn't list its sources, so 4 of 11 searches came back empty. Now it trusts any page the search really opened</li>
+      <li>It never says a size is confirmed unless the store page says so</li>
+      <li>My real test: 3 searches found a Naturalizer flat and three Mary Janes in 12 W that I'd buy</li>
     </ul>
   </div>
 </section>
 
-<!-- 7. Tokenomics -->
+<!-- 7. Costs -->
 <section>
-  <h2>What it costs: pictures dominate</h2>
+  <h2>What it costs: pictures are most of the bill</h2>
   <div class="rule"></div>
   <div class="cols4">
-    <div class="card"><div class="big">{{PLAN_MEDIAN}}<small>fresh day plan (median; 53 s median, 20 s–3½ min). Same day again: $0</small></div></div>
-    <div class="card"><div class="big">{{LIVE_MEDIAN}}<small>live web shop (median, up to $0.12) · catalog {{SHOP_MEDIAN}} · recs $0.0015</small></div></div>
-    <div class="card"><div class="big">$0.18<small>6 mock-ups, only on tap · photo try-on $0.059</small></div></div>
-    <div class="card"><div class="big">{{COST_PER_USER_MONTH}}<small>per active user per month · {{COST_10K}} at 10,000 users</small></div></div>
+    <div class="card"><div class="big">{{PLAN_MEDIAN}}<small>to plan a whole day (typical run, about a minute)</small></div></div>
+    <div class="card"><div class="big">{{LIVE_MEDIAN}}<small>for one search of real online stores</small></div></div>
+    <div class="card"><div class="big">$0.06<small>for one picture of me in an outfit (the 6 shopping pictures together: $0.18)</small></div></div>
+    <div class="card"><div class="big">{{COST_PER_USER_MONTH}}<small>per person per month · {{COST_10K}} a month for 10,000 people</small></div></div>
   </div>
-  <div class="bar"><div style="background:var(--navy);flex:1">Text agents {{TEXT_MONTH}}</div><div style="background:var(--burgundy);width:{{IMAGE_SHARE}}">Pictures {{IMAGE_MONTH}} ({{IMAGE_SHARE}}), mostly the daily try-on</div></div>
+  <div class="bar"><div style="background:var(--navy);flex:1">Text {{TEXT_MONTH}}</div><div style="background:var(--burgundy);width:{{IMAGE_SHARE}}">Pictures {{IMAGE_MONTH}}: {{IMAGE_SHARE}} of the monthly cost, mostly a daily try-on photo</div></div>
   <ul>
-    <li>The month assumes a daily plan and a <b>daily try-on (30)</b>; with try-on opt-in it drops to <b>{{NO_TRYON_MONTH}}</b>, and with retailer feeds instead of live search to <b>{{FEED_COST}}</b></li>
-    <li><b>Cuts that held quality:</b> fingerprints ($0 repeats), pictures on tap + image cache, ban pre-check, compact closet format (<b>74% fewer tokens</b>), prompt caching</li>
-    <li><b>A cut that hurt:</b> low reasoning effort everywhere made the Critic flip-flop on real closets, so the day plan and its Critic run at <b>medium</b> (~6× the old cost, still half a cent)</li>
+    <li><b>Making pictures takes up the largest share of the cost.</b> Everything the AI writes (plans, picks, searches) costs about {{TEXT_MONTH}} a month</li>
+    <li><b>Cheaper options:</b> make the daily try-on photo optional → <b>{{NO_TRYON_MONTH}}</b> a month. Also get product data straight from retailers instead of searching the web → <b>{{FEED_COST}}</b> a month</li>
+    <li><b>Savings that didn't hurt:</b> reusing answers when nothing changed, drawing only when asked, a shorter way of describing the closet (74% less text)</li>
+    <li><b>One that did:</b> I first set every helper to think quickly. The Critic started contradicting itself, so the Planner and Critic now take more time to think. Each plan costs about 6× more, still half a cent</li>
   </ul>
 </section>
 
 <!-- 8. Safety -->
 <section>
-  <h2>Kept safe, and tested</h2>
+  <h2>Safety protocol</h2>
   <div class="rule"></div>
   <div class="cols">
     <ul style="margin-top:0">
-      <li><b>Prompt injection:</b> reviews, page titles and calendar fields are cleaned; instruction-like text is quarantined; the rest is fenced as untrusted data</li>
-      <li><b>Privacy:</b> the agent that reads the web never holds measurements; the one that holds them never reads the web. No photo leaves without consent; GPS stripped</li>
-      <li><b>Malfunction:</b> invented clothes or links force a revise and never win best round; bans and house rules checked in code</li>
-      <li><b>Photos of a person:</b> try-on keeps exact face and body, no slimming; graders use a fictional test-kit person</li>
-      <li><b>Overspending:</b> per-run and per-day budgets checked before every call, 14-call loop guard, ≤ 2 Critic revisions</li>
+      <li><b>Hidden instructions:</b> a review or web page that says "ignore your rules" is cleaned out and treated as plain text, never as an order</li>
+      <li><b>Privacy:</b> the helper that searches the web never sees my measurements; photos are only sent with my OK, and their location data is removed</li>
+      <li><b>No making things up:</b> an outfit with a piece I don't own, or a link nobody visited, is rejected</li>
+      <li><b>Respecting the real person:</b> try-ons keep my face and body as they are, with no slimming or retouching</li>
+      <li><b>Spending limits:</b> every run and every day has a budget, and a run is stopped if it keeps going in circles</li>
     </ul>
     <div>
-      <div class="card" style="text-align:center"><div class="big">{{SAFETY_PASS}}<small>safety checks pass: 59 offline (about 20 s from a fresh clone) + 4 live against the real agents</small></div></div>
-      <p class="cap" style="margin-top:.7em">Tested: a poisoned review is quarantined · the live Scout won't reveal measurements · penny loafers blocked everywhere while ballet flats pass · an unchanged plan makes no model call · a never-seen link is dropped · a 1/5 real plan beats a 5/5 plan with an invented "gold gown".</p>
+      <div class="card" style="text-align:center"><div class="big">All tests pass<small>{{SAFETY_PASS}} automatic safety tests run in about 20 seconds without calling the AI, plus 4 tests against the real AI helpers</small></div></div>
+      <p class="cap" style="margin-top:.7em">Some of the tests: a review with a hidden command gets blocked · the shopping helper refuses to reveal my measurements · loafers I banned never appear anywhere · a link the search never visited is dropped · a plan with an invented "gold gown" never wins.</p>
     </div>
   </div>
 </section>
 
 <!-- 9. Impact -->
 <section>
-  <h2>Impact: a real user test (me)</h2>
+  <h2>Impact: I tested it on my real closet and calendar</h2>
   <div style="display:grid;grid-template-columns:1.3fr 1fr;gap:.9em;align-items:start">
     <div>
       <div class="cols" style="gap:.6em">
-{{SLIDE_IMPACT_CARDS}}
+        <div class="card"><div class="big">105 → 5.5 min<small>to put together a full outfit for a busy recruiting day (timed)</small></div></div>
+        <div class="card"><div class="big">a week → 10 min<small>to find comfortable, polished shoes in 12 wide that I'd buy</small></div></div>
       </div>
       <ul>
-        <li>Outfit: about <b>19× faster</b>, approved ("Love this direction") and wearable</li>
-        <li>Shoes: 3 live searches, $0.176; a critic-approved Naturalizer flat in 12 W at DSW; I'd buy</li>
-        <li>Scaled carefully: 10 min a morning ≈ 60 h a year per user</li>
+        <li>About <b>19× faster</b> to get dressed, and I loved the look ("Love this direction")</li>
+        <li>3 shoe searches for $0.18 total found a Naturalizer flat in 12 W at DSW</li>
+        <li>At 10 minutes saved a morning, that's about 60 hours a year per person</li>
       </ul>
 {{SLIDE_IMPACT_NOTE}}
     </div>
     <div>
       <img class="shot" src="screenshots/personal/a4_plan_blocks.jpg" alt="my approved plan" style="height:300px;object-fit:contain" />
-      <p class="cap">My approved plan for Oct 26: campus look with my backpack (house rule), recruiting look with my red satin blouse. Before the taste-ban fix, recommendations included black penny loafers I had already rejected; after, none.</p>
+      <p class="cap">The plan I approved: my backpack for campus (one of my house rules) and my red satin blouse for recruiting. Before the fix it kept suggesting black loafers I had already said no to. After, it never did.</p>
     </div>
   </div>
 </section>
 
 <!-- 10. Limits & next -->
 <section>
-  <h2>Limits, and what's next</h2>
+  <h2>What I learned, and what's next</h2>
   <div class="rule"></div>
   <div class="cols">
     <div>
       <ul style="margin-top:0">
-        <li><b>One real user</b>, no classmates; the shoe "before" is self-reported</li>
-        <li><b>Speed:</b> a fresh plan takes 20 s–3½ min; the Sample Critic still said <i>revise</i></li>
-        <li><b>Live shop</b> $0.055–0.12; listings rarely confirm width or comfort</li>
-        <li><b>Bans are word-based:</b> a black "Cloud Loafer" slipped past "black leather loafers"; "loafers with a wide toe box" was refused</li>
-        <li><b>Try-on likeness:</b> recent try-ons don't look enough like me</li>
+        <li><b>Reviews for fit:</b> my original goal was to use reviews to decide fit and size. Requiring that evidence left too few products to choose from. A different prompt could use review data without filtering out so much</li>
+        <li><b>One tester so far:</b> the results are from me, not yet from classmates</li>
+        <li><b>Speed:</b> a new plan takes 20 seconds to 3½ minutes</li>
+        <li><b>Store searches</b> cost 5–12 cents, and stores rarely list width or comfort</li>
+        <li><b>No's are matched on words:</b> a "Cloud Loafer" slipped past "black leather loafers", and "loafers with a wide toe box" was blocked</li>
       </ul>
     </div>
     <div>
       <ol style="margin-top:0">
-        <li><b>Pilot with 10 classmates:</b> morning time, Critic-vs-human agreement, returns avoided</li>
-        <li><b>Smarter bans:</b> attributes (style, toe shape, material) + "is this what you meant?"</li>
-        <li><b>Try-on that keeps the person:</b> clothes-only edit on my own photo</li>
-        <li><b>Retailer feeds</b> with real size and width data ({{FEED_COST}} per user per month)</li>
-        <li>A guided first-run walkthrough and a 7 a.m. push</li>
+        <li><b>A fitting-room avatar of me</b> and try-on pictures that look truer to the outfit</li>
+        <li><b>Retailer product data</b> with real size and width info: cheaper than live search, {{FEED_COST}} per person per month</li>
+        <li><b>A guided walkthrough</b> for first-time users</li>
+        <li><b>Smarter no's</b> that understand style, toe shape and material, and ask "is this what you meant?"</li>
+        <li><b>A pilot with 10 classmates</b> to measure time saved and returns avoided</li>
       </ol>
     </div>
   </div>

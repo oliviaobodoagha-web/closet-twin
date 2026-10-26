@@ -37,6 +37,8 @@
   figure.tall img { max-height: 3.3in; }
   figure.crop img { object-fit: cover; }
   figure.small img { max-height: 1.8in; }
+  figure.cards .cardcrop { width: 5in; max-width: 100%; aspect-ratio: 2464 / 905; overflow: hidden; background: #faf7f0; border: 1px solid var(--line); border-radius: 6px; }
+  figure.cards .cardcrop img { max-height: none; margin-top: -8.32%; border: 0; border-radius: 0; }
   figcaption { font-size: 9pt; color: var(--muted); margin-top: 4px; }
   figcaption b { color: var(--navy); }
   .two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
@@ -93,7 +95,7 @@
 <p><b>How people deal with it today.</b> In the morning: stare at the closet, check a weather app and the calendar, and guess, often swapping pieces two or three times. When shopping: filter by size, then read dozens of reviews looking for "runs small" or "wide toe box". Then order two sizes and return one, or keep a pair that hurts by 3 p.m.</p>
 <p><b>What it costs.</b></p>
 <ul>
-  <li><b>Time:</b> surveys of about 2,000 women each report 12 to 18 minutes every morning spent choosing an outfit (Simon Jersey 2015: about 12 min on weekdays; Marks &amp; Spencer 2016: 17 min; Barclays/UCL 2020: 18 min), roughly 70 to 100 hours a year. On my real recruiting day (Oct 26) it took me <b>105 minutes</b>.</li>
+  <li><b>Time:</b> surveys of about 2,000 women each report 12 to 18 minutes every morning spent choosing an outfit (Simon Jersey 2015: about 12 min on weekdays; Marks &amp; Spencer 2016: 17 min; Barclays/UCL 2020: 18 min), roughly 70 to 100 hours a year. On a typical day I spend about <b>35 minutes</b> shopping for clothes and choosing what to wear. On my real recruiting day (Oct 26) it took me <b>105 minutes</b>.</li>
   <li><b>Money and waste:</b> online apparel return rates are about 24–31% (Coresight 2023: 24.4%; ECDB 2026: 31% of US apparel orders), and shoes are near 31%. Size and fit is the top reason, cited by 53% of sellers (Coresight) and behind about 70% of apparel returns (McKinsey 2021).</li>
   <li><b>Frustration:</b> for anyone outside "standard" sizing (tall, curvy, wide feet), most of the catalog doesn't fit. Size filters say "available in 12" but not "available in 12 wide". That lives only in reviews and product pages. My last search for wearable wide flats took <b>about a week</b>.</li>
 </ul>
@@ -297,7 +299,7 @@
 {{TOKEN_TABLE}}
 </table>
 <p class="small">Run counts are small for some modes (e.g. 4 mock-up sets, 5 try-ons). A fresh plan ranges from $0.002 (approved first time) to $0.013 (three rounds), and from 20 s to 3½ min; the same day again is $0 and instant.</p>
-<figure class="small"><img src="screenshots/runs.png" alt="Runs tab" /><figcaption><b>Figure 13.</b> The Runs &amp; Safety tab: per-mode averages and every run's tokens, web searches, cost and time.</figcaption></figure>
+<figure class="cards"><div class="cardcrop"><img src="screenshots/runs.png" alt="Runs tab, per-mode cards" /></div><figcaption><b>Figure 13.</b> The Runs &amp; Safety tab: per-mode average cost, tokens and time. Below these cards the tab lists every run's tokens, web searches, cost and time.</figcaption></figure>
 
 <h3>Per user per month, and at scale</h3>
 <p>Assumed active-user month: 30 fresh daily plans and 10 "show another option" swaps; 4 recommendation runs and 1 set of mock-ups; 4 catalog and 4 live shops; 4 stylist reads and 1 goal picture; 2 board reads; 5 new closet pieces; a daily try-on of the planned outfit (the app makes one automatically once a body photo is in) and one 360° view. Feedback, bans, house rules, fingerprints and the price tracker are code, not model calls. Onboarding is a one-time {{ONBOARD_COST}}: about 40 closet photos, one color and one style analysis.</p>
