@@ -4,6 +4,7 @@
 
 Built by Olivia Obodoagha for MGT 409: AI Foundations for Managers (Yale SOM, Fall 2026).
 
+- Demo video (about 3 min): https://youtu.be/f1dkgdZtndo
 - Report: `report.html` · Slides: `slides.html` (submitted on Canvas)
 - Fresh clone to running app: about 3 minutes (steps below). Tested on Python 3.9.6 (macOS built-in `/usr/bin/python3`) and 3.14.7.
 
