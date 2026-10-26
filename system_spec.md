@@ -16,7 +16,7 @@ learns from feedback. Internally multi-agent (planner, critic, recommender, scou
 - Text model `gpt-6-luna` via Portkey (`PORTKEY_API_KEY`) or `OPENAI_API_KEY`; images `gpt-image-2.5-sunburst` on
   `OPENAI_API_KEY`. `.env` looked up in repo folder, then parent. Weather: keyless public API.
 - Run `.venv/bin/python run.py --no-browser` → http://localhost:8000. Tests `.venv/bin/python tests/safety_tests.py`
-  → **59/59** must pass. Restart the server after Python edits.
+  → **59/59** must pass (`--live` adds 4 real-agent checks, ~$0.002 → 63/63; offline tests read today's real spend, so run with `MAX_USD_PER_DAY=1.50` once the day passes $1). Restart the server after Python edits.
 - Data sets: `data/sample/` (committed demo) and `data/user/` (Olivia's, git-ignored). Header toggle switches.
 
 ## 3. Architecture
@@ -89,7 +89,7 @@ prompts/ one .md per agent + _shared_rules.md + fashion_fundamentals.md (styling
 - [x] README updated for today's features + Python version + data-set switching → B1
 - [ ] `report.html` rebuilt (10–15 pages, all 8 sections with evidence) via `docs/build_report.py`
 - [ ] `slides.html` rebuilt (≤10 slides, reveal.js CDN, embedded images)
-- [ ] Evidence refreshed: `docs/export_runs.py`, screenshots (real-user test `docs/user_test.json` done → B2)
+- [x] Evidence refreshed: `docs/export_runs.py` (mock-up set vs goal picture split, current-code medians), 63/63 incl. live, Sample screenshots, no personas/3D avatar (real-user test → B2) → B3
 - [x] Git: first commit + public repo https://github.com/oliviaobodoagha-web/closet-twin (Olivia OK'd) → B1
 - [x] Fresh-clone dry run (`.env` one folder up, ≤10 min): real GitHub clone, 3.9 install + 59/59 in 19 s → B1
 
@@ -119,9 +119,9 @@ frozen and **Phase B gets the project submitted**. A modules own disjoint files,
 ### Phase B · submit (code frozen)
 | # | Module | Owns (only these files) | Done when | Pts | Status |
 |---|---|---|---|---|---|
-| B1 | Repo + fresh-clone | `README.md`, `.env.example`, `requirements.txt` (+ optional `requirements-extra.txt`), `.gitignore`, `run.py` | README matches the app (no personas, no "Wore it/Save"; ♡/Not for me, 5-step Me, board, archetype pictures, goal + strategy, fingerprints, live shop, OPENAI_API_KEY also for mock-ups/product shots/goal, current costs, first plan ~30–40 s, tested Python versions); real fresh clone + `.env` one level up installs and runs on `/usr/bin/python3` 3.9 and 3.12/3.13 (split heavy deps if needed); `git status` clean of personal files; commit + push + public or add `zlisto` **only with Olivia's go-ahead**; repo URL → `docs/user_test.json` `repo_url` | 5–20 | **done** (public repo https://github.com/oliviaobodoagha-web/closet-twin, 1 commit, 126 files, 10 MB, no personal paths or key-like strings; real clone from GitHub + `.env` one level up: `/usr/bin/python3` 3.9.6 install + 59/59 in 19 s (warm pip cache; a cold machine is slower), also 3.14.7 59/59; **3.12/3.13 not tested** (not on this Mac); clone server ran a sample plan end to end ($0.013, 7 calls, **210 s**, so README says 30 s–3½ min); `run.py` gained optional `PORT`; README lists 14 text agents (one per prompt) for B4/B5 to match; **later edits (B2's `docs/user_test.json`, B3–B5 docs) need a final commit + push**). *Then (Olivia asked: a TA must be able to test it themselves):* grader test kit `data/sample/test_kit/` (AI-generated fake person full-body + face, 6 garment photos, fictional receipt PDF/JPG, daily-repeating `.ics`, own README) + Sample ships a real saved 10/26 plan (`data/sample/memory.json` un-ignored; the old one was an empty test stub). Frozen code keeps all photos/closet adds/receipts in My closet, so the kit is used there. Dry run from the GitHub clone's empty My closet: 7 items tagged + cut out ($0.004; a sample drawing of a sneaker tagged as a skirt → replaced with a photo), receipt 3/3 lines ($0.0004), plan 10/27 3 looks approved ($0.006, 104 s; first try had 1 generic look because a dated `.ics` only remaps on Sample → kit `.ics` now RRULE daily), auto daily try-on of the fake person ($0.066, good likeness). Kit images cost ≈ $0.15. **Not checked:** the in-browser face/color step (MediaPipe) and receipt add + product shots; an auto try-on on page load once a photo exists is frozen behavior, now disclosed in both READMEs) |
+| B1 | Repo + fresh-clone | `README.md`, `.env.example`, `requirements.txt` (+ optional `requirements-extra.txt`), `.gitignore`, `run.py` | README matches the app (no personas, no "Wore it/Save"; ♡/Not for me, 5-step Me, board, archetype pictures, goal + strategy, fingerprints, live shop, OPENAI_API_KEY also for mock-ups/product shots/goal, current costs, first plan ~30–40 s, tested Python versions); real fresh clone + `.env` one level up installs and runs on `/usr/bin/python3` 3.9 and 3.12/3.13 (split heavy deps if needed); `git status` clean of personal files; commit + push + public or add `zlisto` **only with Olivia's go-ahead**; repo URL → `docs/user_test.json` `repo_url` | 5–20 | **done** (public repo https://github.com/oliviaobodoagha-web/closet-twin, 1 commit, 126 files, 10 MB, no personal paths or key-like strings; real clone from GitHub + `.env` one level up: `/usr/bin/python3` 3.9.6 install + 59/59 in 19 s (warm pip cache; a cold machine is slower), also 3.14.7 59/59; **3.12/3.13 not tested** (not on this Mac); clone server ran a sample plan end to end ($0.013, 7 calls, **210 s**, so README says 30 s–3½ min); `run.py` gained optional `PORT`; README lists 14 text agents (one per prompt) for B4/B5 to match; **later edits (B2's `docs/user_test.json`, B3–B5 docs) need a final commit + push**). *Then (Olivia asked: a TA must be able to test it themselves):* grader test kit `data/sample/test_kit/` (AI-generated fake person full-body + face, 6 garment photos, fictional receipt PDF/JPG, daily-repeating `.ics`, own README) + Sample ships a real saved 10/26 plan (`data/sample/memory.json` un-ignored; the old one was an empty test stub). Frozen code keeps all photos/closet adds/receipts in My closet, so the kit is used there. Dry run from the GitHub clone's empty My closet: 7 items tagged + cut out ($0.004; a sample drawing of a sneaker tagged as a skirt → replaced with a photo), receipt 3/3 lines ($0.0004), plan 10/27 3 looks approved ($0.006, 104 s; first try had 1 generic look because a dated `.ics` only remaps on Sample → kit `.ics` now RRULE daily), auto daily try-on of the fake person ($0.066, good likeness). Kit images cost ≈ $0.15. *Later, Olivia ran the kit herself on a fresh GitHub clone (port 8002): face/colors step worked, clothes + receipt add + product shots ($0.157) + calendar + plan ($0.0097, 236 s, critic revised to the max, best round kept → READMEs now say up to ~4 min).* an auto try-on on page load once a photo exists is frozen behavior, now disclosed in both READMEs) |
 | B2 | Impact: real user test | `docs/user_test.json` (from template), `docs/screenshots/personal/` | Timed before/after on Olivia's real closet + calendar (outfit choice) and one wide-shoe search vs Shop tab; plans she'd wear; a quote; screenshots; ideally 1–2 classmates | 2.5 + Tier 3 | **done** (`docs/user_test.json`: outfit for Mon 10/26 **105 → 5.5 min**, approved "Love this direction", used the plan made at 09:50 UTC ($0.0109, 158 s; the 5.5 min excludes that run); shoes 12 W **about a week (self-reported, past search) → 10 min**, 3 live searches $0.176 (1st blocked free by her men's-loafer ban, 2nd Naturalizer Flexy Ballet Flat DSW 12 W critic-approved, 3rd 3 Mary Janes, critic revise on toe box), she'd buy, tracked Cosmic Mary Jane; quote saved verbatim; 5 screenshots `b2_*.jpg` (git-ignored). **Not measured:** shoe before not timed today, clicks, apps used before, **no classmates**. Open question for B4 limits: 'loafers with a wide toe box' blocked by the men's-style-loafer ban (maybe too strict). Server on 8000 was restarted with `MAX_USD_PER_DAY=1.50` for today only (env var, `.env` untouched)) |
-| B3 | Evidence refresh (sample data only) | `docs/runs_evidence.jsonl`, `docs/tokenomics.json`, `docs/export_runs.py`, `docs/safety_test_results.txt`, `docs/cost_experiments.json`, non-personal `docs/screenshots/*` | Fresh runs (plan fresh, recommend + mock-ups, stylist read, aesthetic read, catalog shop, 1 live shop; ~$0.30, Olivia OK); `export_runs.py`; `safety_tests.py --live` saved; new screenshots (plan + alternates + trace, Margaux-Sloan card with tiles/board/goal, recs with mock-ups, live shop picks, Runs tab, a code rule sending a plan back); old persona/3D-avatar screenshots replaced | feeds ~5 | todo |
+| B3 | Evidence refresh (sample data only) | `docs/runs_evidence.jsonl`, `docs/tokenomics.json`, `docs/export_runs.py`, `docs/safety_test_results.txt`, `docs/cost_experiments.json`, non-personal `docs/screenshots/*` | Fresh runs (plan fresh, recommend + mock-ups, stylist read, aesthetic read, catalog shop, 1 live shop; ~$0.30, Olivia OK); `export_runs.py`; `safety_tests.py --live` saved; new screenshots (plan + alternates + trace, Margaux-Sloan card with tiles/board/goal, recs with mock-ups, live shop picks, Runs tab, a code rule sending a plan back); old persona/3D-avatar screenshots replaced | feeds ~5 | **done** (Sample only, $0.095 of ~$0.30 OK'd: plan 10/27 $0.013/197 s/7 calls, code sent it back 3× (sneakers too casual for recruiting, brown shoes under black-and-white), critic still *revise* after 2 revisions so best round shown; aesthetic re-read $0.0008 (board cleared + same 3 pictures re-uploaded), stylist read $0.0011, goal picture $0.011, recs $0.0015, catalog shops $0.0015 + $0.0043, live shop $0.055 (2 rounds, 1 Naturalizer lead at Macy's, critic *revise*), live tests $0.002. **Not done:** mock-ups on Sample are impossible in frozen code (`/api/recommend/mockups` always uses My closet, `main.py:44`), so no `recs` mock-up screenshot; mock-up cost comes from logged My closet runs (numbers only). Fitting Room shot = test-kit fake person's saved try-on from B1's GitHub clone served keyless on :8010 ($0). **Found:** Sample's catalog shop showed the black ArcWalk Cloud Loafer although 'black leather loafers' is banned (ban needs 'leather'; product text doesn't say it), only the critic flagged it; offline tests use a real Ledger, so they fail once today's real spend passes the $1.00 default (`MAX_USD_PER_DAY=1.50` used); `shop.png`/`shop_trace.png` have a thin gold dotted line across one row (render artifact)) |
 | B4 | Report rewrite | `docs/report_src.html`, `docs/build_report.py` | Real repo link; Margaux-Sloan, outfit_rules + taste bans, fingerprints, best-round, alternates, recommender + mock-ups, stylist read/goal, aesthetic board, live-shop retry/merge in text + diagram; one agent count everywhere; new traced run; tokenomics match code (planner + critic **medium**, current medians ≈ $0.0048/plan, live shop ≈ $0.08–0.09, image/mock-up/goal lines); safety count matches results file; §7 real-user numbers (B2) + A4 before/after; explain 12W (Olivia) vs 11W (sample); no "3D"; 10–15 printed pages | ~7 | todo |
 | B5 | Slides | `docs/slides_src.html` | ≤10 slides; fix Blair quote (:115), agent count (:90), "8 try-ons" (:145), "low effort" (:149); add Margaux-Sloan / archetype / board / goal visuals (sample only); numbers match report; build after B4 | ~2 | todo |
 
@@ -144,31 +144,38 @@ frozen and **Phase B gets the project submitted**. A modules own disjoint files,
 - 2026-10-26 B1 kit completed + pushed (commit cb2a703): every app input now has a kit item (8 clothes incl. gym, fictional product page + iCal link served from the repo's raw GitHub URL, place photos, Pinterest board, 13-step checklist). Fresh GitHub clone: iCal link connects (5 events on any date), product link adds 'Black ruffle-neck satin blouse' $78 with photo, place photo upload ok. Kit images ≈ $0.21 total.
 - 2026-10-26 B2 real user test (Olivia, real closet + calendar): outfit 105 → 5.5 min (~19× faster), approved and wearable; wide-width shoe (12 W) about a week (self-reported) → 10 min, $0.176 for 3 live searches, would buy (Naturalizer flats / Mary Janes, DSW + Clarks). Quote: "…I had to choose outfits that would match my shoes instead of the other way around. This is life-changing." No classmates.
 
+- 2026-10-26 B3 evidence refresh (Sample, $0.095): `tokenomics.json` now splits `mockup_set` ($0.183, 6 pictures) from `goal_picture` ($0.011) and adds `by_mode_current_code` (since 10/26): plan $0.0050 median (max $0.013, 53 s median, 197 s max), recs $0.0015, catalog shop $0.0025, live shop $0.055 median ($0.12 max), try-on $0.059, stylist read $0.0011, aesthetic $0.0006; 88 Sample runs in `runs_evidence.jsonl`; safety 63/63 (59 offline + 4 live); 13 screenshots retaken (hero, plan, critic, trace, code rule sending a plan back, stylist board + 8 archetype tiles, goal + strategy, recs + trace, catalog + live shop with trace, Runs tab, Me, Closet, add card, plan feedback) + new Fitting Room (fake person); 7 3D-avatar shots deleted; no Blair/Cher/Margot/Serena left.
+
 ## 9. Next module prompt (written by the module that just finished; replace, don't append)
-**Open now: B3.** B1 and B2 are done (repo public + test kit; real-user numbers in `docs/user_test.json`). Code is still frozen.
+**Open now: B4.** B1, B2, B3 done. Code is still frozen.
 
-**B3 prompt:**
+**B4 prompt:**
 
-> Read "final project/system_spec.md" first (single source of truth), then do module B3 (evidence refresh, Sample data
-> only). Code is frozen: own only `docs/runs_evidence.jsonl`, `docs/tokenomics.json`, `docs/export_runs.py`,
-> `docs/safety_test_results.txt`, `docs/cost_experiments.json`, non-personal `docs/screenshots/*`. Don't touch `app/`,
-> `static/`, `tests/`, `docs/user_test.json` or `data/user/`. Server on port 8000 (it was restarted today with
-> `MAX_USD_PER_DAY=1.50` as an env var; if you restart it, keep that or ask me).
+> Read "final project/system_spec.md" first (single source of truth), then do module B4 (report rewrite). Own only
+> `docs/report_src.html` and `docs/build_report.py`; build `report.html` with `docs/build_report.py`. Don't touch `app/`,
+> `static/`, `tests/`, `data/`, `docs/user_test.json` or screenshots. No paid runs needed.
 >
-> 1. Ask me first, then on **Sample** only (~$0.30): fresh plan (+ alternates + trace), recommend + **Draw them**
->    mock-ups, stylist read, aesthetic read, one catalog shop, one live shop. Note: Sample now ships a saved 10/26 plan in
->    `data/sample/memory.json` (committed for graders); a fresh run overwrites it, so either plan another date or keep
->    a good plan there afterwards.
-> 2. `docs/export_runs.py` → `runs_evidence.jsonl` + `tokenomics.json` (medians per mode; check against README's cost
->    table: plan ≈ $0.005–0.013, recs ≈ $0.002, mock-ups ≈ $0.19, live shop ≈ $0.045 / $0.08–0.10 revised).
-> 3. `tests/safety_tests.py` (59/59) and `--live` → `docs/safety_test_results.txt` (ask before `--live`, ~$0.01).
-> 4. New non-personal screenshots: plan + alternates + trace, Margaux-Sloan card with archetype tiles/board/goal, recs
->    with mock-ups, live shop picks, Runs tab, a code rule sending a plan back; replace old persona (Blair/Cher/Margot/
->    Serena) and 3D-avatar screenshots. The test kit's fake person (`data/sample/test_kit/`) may appear in try-on shots;
->    never Olivia.
-> 5. For B4: README lists **14 text agents** (one per prompt); `docs/build_report.py` still says "size 11 wide" (she is
->    12 W) and its impact rows say "gym → class → coffee chat → dinner"; B2's real day was campus event + office hours +
->    3 recruiting chats.
+> 1. Sources: §6–§8 here, `README.md` (14 text agents, one per prompt: use that count everywhere), `docs/tokenomics.json`
+>    (**use `by_mode_current_code`**: plan $0.0050 median / $0.013 max / 53 s median, recs $0.0015, mock-up set $0.183,
+>    goal picture $0.011, catalog shop $0.0025, live shop $0.055 median, $0.12 max, try-on $0.059),
+>    `docs/safety_test_results.txt` (63/63 = 59 offline + 4 live), `docs/user_test.json` (B2), `docs/runs_evidence.jsonl`.
+> 2. Screenshots in `docs/screenshots/`: hero, today_plan, critic, trace, safety_trace (code sends a plan back),
+>    stylist (board + archetype tiles), stylist_goal, recs, shop (catalog), shop_trace (live, 2 rounds), runs, me,
+>    closet, add_wardrobe, today_feedback.jpg, fitting_room (test-kit fake person), inspo.jpg, calendar_link. The
+>    `fitting_room_*` and `scene_*` files are deleted: remove any references to them. No mock-up screenshot (Sample can't
+>    draw them); describe mock-ups from cost data or use none.
+> 3. Text + diagram: real repo link https://github.com/oliviaobodoagha-web/closet-twin; Margaux-Sloan, outfit_rules +
+>    taste bans, house rules in code, fingerprints, best-round, alternates, recommender + mock-ups on tap, stylist
+>    read/goal, aesthetic board, live-shop link check + second round; planner + critic effort **medium**; no "3D".
+> 4. Impact (§7 of report): B2 numbers (outfit 105 → 5.5 min; 12 W shoes ~a week → 10 min, $0.176), A4 before/after.
+>    Fix `build_report.py`: "size 11 wide" → Olivia is 12 W (Sample persona is 11 W; explain), and the impact rows'
+>    "gym → class → coffee chat → dinner" → B2's real day was campus event + office hours + 3 recruiting chats.
+> 5. Honest limits: README's "≈ $0.08–0.10 revised live shop" is really $0.055–0.12; plans 30 s–3½ min; B3's sample
+>    plan still *revise* after 2 revisions; ban gap (catalog 'Cloud Loafer' passed the 'black leather loafers' ban,
+>    critic caught it); 'loafers with a wide toe box' blocked by the men's-loafer ban (B2); try-on likeness (A5); offline
+>    tests depend on today's real spend (Ledger reads logs); no classmates in the user test.
+> 6. 10–15 printed pages; check by printing to PDF.
 >
-> Never read or print .env values. Don't commit (B1 final push does that, with my go-ahead). When done: tick §6, set B3
-> status in §7, one §8 line, write the B4 prompt into §9, give me the next prompt and a short summary.
+> Never read or print .env values. Don't commit (B1 final push, with my go-ahead; it must include B3's `data/sample/`
+> changes: 10/27 plan, re-read board + goal picture, `image_cache.json`). When done: tick §6, set B4 status in §7, one §8
+> line, write the B5 prompt into §9, give me the next prompt and a short summary.
