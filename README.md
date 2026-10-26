@@ -72,7 +72,7 @@ The app opens on the **Sample** data set: 22 closet items, a sample profile and 
 
 `data/sample/test_kit/` has everything needed to try every input in the app yourself on fictional data: an AI-generated **fake person** (face close-up for colors, full-body photo for sizes and try-on), **8 clothing photos**, a fictional **product page link**, a fictional **receipt** (PDF + photo), the **sample calendar** as an `.ics` file and as an **iCal link**, **inspiration pictures** and a public Pinterest board, and two **real-place photos** for try-on scenes. Its [README](data/sample/test_kit/README.md) is a 13-step checklist: which tab, which file, what to expect.
 
-- **Free right away:** Sample ships a saved plan for **2026-10-26**. Set the date picker to 10/26 and it loads instantly with no model call. Any other date runs a fresh plan; the sample calendar moves onto whatever day you pick.
+- **Free right away:** Sample ships saved plans for **2026-10-27** (and 10/26). Set the date picker to 10/27 and it loads instantly with no model call (running the offline tests replaces the 10/26 one with a test stub; `git checkout data/sample` restores it). Any other date runs a fresh plan; the sample calendar moves onto whatever day you pick.
 - **Do it yourself in My closet:** the app keeps photos, closet adds and receipts in My closet (empty on your machine, never committed), so build a test closet there from the kit in about 10 minutes. Checked from a fresh clone: clothes + receipt + calendar → an approved 3-look plan ($0.006) and a photo try-on of the fake person ($0.066).
 - **Your own key for pictures:** photo try-on and mock-ups need `OPENAI_API_KEY`. With a body photo in, Today makes one automatic try-on per day (≈ $0.07).
 

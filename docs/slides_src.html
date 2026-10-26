@@ -11,31 +11,34 @@
   :root { --ivory:#fbf8f2; --navy:#14213d; --ink:#1d2433; --muted:#5d6474; --green:#1f4d3a; --burgundy:#6e1f2e; --gold:#b8964e; --line:#e6dfd1; }
   .reveal-viewport { background: var(--ivory); }
   .reveal { font-family: "Jost", Arial, sans-serif; color: var(--ink); font-size: 30px; }
-  .reveal h1, .reveal h2, .reveal h3 { font-family: "Playfair Display", Georgia, serif; color: var(--navy); text-transform: none; letter-spacing: 0; margin-bottom: .35em; }
+  .reveal h1, .reveal h2, .reveal h3 { font-family: "Playfair Display", Georgia, serif; color: var(--navy); text-transform: none; letter-spacing: 0; margin-bottom: .3em; }
   .reveal h1 { font-size: 2.6em; }
-  .reveal h2 { font-size: 1.55em; }
+  .reveal h2 { font-size: 1.45em; }
   .reveal .slides section { text-align: left; }
   .kicker { font-size: .5em; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); margin-bottom: .4em; }
-  .tag { font-family: "Playfair Display", serif; font-style: italic; color: var(--burgundy); font-size: .95em; }
+  .tag { font-family: "Playfair Display", serif; font-style: italic; color: var(--burgundy); font-size: .9em; }
   .plaid { height: 10px; width: 100%; margin: .5em 0 .8em; border-radius: 2px; background:
       repeating-linear-gradient(90deg, rgba(20,33,61,.85) 0 12px, transparent 12px 26px),
       repeating-linear-gradient(0deg, rgba(184,150,78,.55) 0 3px, transparent 3px 9px), #6e1f2e; }
-  .rule { border-top: 1px solid var(--gold); margin: .3em 0 .6em; }
-  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1em; align-items: center; }
-  .cols3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: .7em; }
-  .card { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: .55em .7em; box-shadow: 0 6px 18px rgba(20,33,61,.06); font-size: .62em; line-height: 1.4; }
+  .rule { border-top: 1px solid var(--gold); margin: .2em 0 .5em; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1em; align-items: start; }
+  .cols3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: .6em; }
+  .cols4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: .5em; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: .5em .65em; box-shadow: 0 6px 18px rgba(20,33,61,.06); font-size: .64em; line-height: 1.38; }
   .card b { color: var(--navy); }
-  .big { font-family: "Playfair Display", serif; font-size: 2.1em; color: var(--navy); line-height: 1; }
-  .big small { display: block; font-family: "Jost"; font-size: .3em; color: var(--muted); letter-spacing: .05em; margin-top: .35em; }
-  .reveal ul { font-size: .72em; line-height: 1.45; }
-  .reveal li { margin: .25em 0; }
-  .reveal img.shot { max-width: 100%; border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 10px 30px rgba(20,33,61,.12); margin: 0; max-height: 520px; }
-  .cap { font-size: .45em; color: var(--muted); margin-top: .3em; }
-  .reveal table { font-size: .5em; border-collapse: collapse; width: 100%; }
-  .reveal table th { background: var(--navy); color: #fff; padding: .35em .5em; border: none; }
-  .reveal table td { padding: .3em .5em; border-bottom: 1px solid var(--line); }
-  .pill { display: inline-block; font-size: .55em; border: 1px solid var(--gold); border-radius: 999px; padding: .1em .6em; margin: .15em .15em 0 0; color: var(--navy); background: #fff; }
-  .note { font-family: "Playfair Display", serif; font-style: italic; color: var(--green); font-size: .7em; border-left: 3px solid var(--gold); padding-left: .6em; }
+  .card h3 { font-size: 1.15em; margin: 0 0 .25em; }
+  .big { font-family: "Playfair Display", serif; font-size: 1.6em; color: var(--navy); line-height: 1.05; }
+  .big small { display: block; font-family: "Jost"; font-size: .42em; color: var(--muted); letter-spacing: .02em; margin-top: .35em; line-height: 1.35; }
+  .reveal ul, .reveal ol { font-size: .68em; line-height: 1.42; margin-left: 1em; }
+  .reveal li { margin: .22em 0; }
+  .reveal img.shot { display: block; width: 100%; border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 10px 30px rgba(20,33,61,.12); margin: 0; object-fit: cover; object-position: top; background: #fff; }
+  .cap { font-size: .48em; color: var(--muted); margin-top: .3em; line-height: 1.35; }
+  .pill { display: inline-block; font-size: .5em; border: 1px solid var(--gold); border-radius: 999px; padding: .1em .6em; margin: .15em .15em 0 0; color: var(--navy); background: #fff; }
+  .note { font-family: "Playfair Display", serif; font-style: italic; color: var(--green); font-size: .66em; border-left: 3px solid var(--gold); padding-left: .6em; line-height: 1.4; }
+  .flow { font-size: .56em; color: var(--navy); background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: .4em .6em; line-height: 1.5; }
+  .flow b { color: var(--burgundy); }
+  .bar { display: flex; height: 34px; border-radius: 6px; overflow: hidden; font-size: .45em; color: #fff; margin: .3em 0 .2em; }
+  .bar div { display: flex; align-items: center; padding: 0 .7em; white-space: nowrap; }
   .todo { background: #fff1c9; outline: 1px dashed #b8964e; }
   .reveal .progress { color: var(--gold); }
   .reveal .controls { color: var(--navy); }
@@ -44,153 +47,212 @@
 <body>
 <div class="reveal"><div class="slides">
 
+<!-- 1. Title -->
 <section>
-  <div class="kicker">MGT 409 · Final Project · Olivia Obodoagha</div>
-  <h1>Closet Twin</h1>
-  <div class="tag">An AI stylist that dresses you from your real closet for your real day, and learns from every outfit.</div>
-  <div class="plaid"></div>
-  <div class="cols">
-    <ul>
-      <li><b>Dresses you daily</b>: one decided outfit per part of your day, from calendar + live weather</li>
-      <li><b>Learns</b>: banger, got compliments, comfy, not me → no repeats, more of what works</li>
-      <li><b>Returns teach it your size</b> per brand</li>
-      <li><b>Shops gaps in your size</b> and budget (resale too), from Pinterest or Instagram inspiration, with price tracking</li>
-      <li>Shows it on <b>the real you, in 360°</b>; a Critic checks every suggestion first</li>
-    </ul>
-    <img class="shot" src="screenshots/personal/tryon_classroom.jpg" alt="photo try-on" style="max-height:540px" />
+  <div style="display:grid;grid-template-columns:1.55fr 1fr;gap:1.1em;align-items:center">
+    <div>
+      <div class="kicker">MGT 409 · Final Project · Olivia Obodoagha</div>
+      <h1>Closet Twin</h1>
+      <div class="tag">One AI stylist, Margaux-Sloan, who dresses me from my real closet for my real day, remembers what I say no to, and shops in my size.</div>
+      <div class="plaid"></div>
+      <ul>
+        <li>Calendar + live weather → one decided look per part of the day, with alternates</li>
+        <li>My style archetypes, color season and inspiration board shape every look</li>
+        <li>"Not for me" becomes a <b>hard rule checked in code</b>, so it never comes back</li>
+        <li>Finds the 3 pieces worth buying next, searches real stores in <b>12 wide</b>, shows a look on a photo of me</li>
+        <li><b>14 specialist agents</b> behind one voice; code checks every answer</li>
+      </ul>
+    </div>
+    <div>
+      <img class="shot" src="screenshots/personal/tryon_classroom.jpg" alt="photo try-on" style="height:560px" />
+      <p class="cap">A photo try-on of a planned look, on me.</p>
+    </div>
   </div>
 </section>
 
+<!-- 2. Problem -->
 <section>
-  <h2>The problem</h2>
+  <h2>The problem: getting dressed, and buying shoes that fit</h2>
   <div class="rule"></div>
   <div class="cols3">
-    <div class="card"><div class="big">12–18<small>minutes every morning choosing an outfit (UK surveys, about 2,000 women each)</small></div></div>
+    <div class="card"><div class="big">12–18 min<small>every morning choosing an outfit (UK surveys, ~2,000 women each); <b>105 min</b> for me on a real recruiting day</small></div></div>
     <div class="card"><div class="big">24–31%<small>of online apparel orders are returned (Coresight 2023, ECDB 2026)</small></div></div>
     <div class="card"><div class="big">53–70%<small>of those returns are about size and fit (Coresight, McKinsey)</small></div></div>
   </div>
-  <p style="font-size:.66em;margin-top:.8em"><b>Me:</b> an MBA day goes spin class → case discussion → recruiter coffee chat → dinner. And I wear a <b>women's 12 wide</b>. "Available in 12" doesn't tell me "wide, with a roomy toe, walkable all day". That lives only in the reviews.</p>
+  <p style="font-size:.7em;margin-top:.8em"><b>Me:</b> a recruiting day holds a campus event, career office hours and consulting coffee chats, each with its own dress code, plus a cold walk. And I wear a <b>women's 12 wide</b>. "Available in 12" doesn't say "wide, polished, walkable all day"; that lives only in reviews. My last search took <b>about a week</b>.</p>
+  <p style="font-size:.7em"><b>What exists:</b> Alta does closet + daily outfits + shopping well. Reviewers of Alta, Daydream, Doppl, Indyx and ChatGPT-as-stylist keep saying the same things: <i>generic or random looks, ignores context and past dislikes, wrong links, no fit check.</i></p>
 </section>
 
+<!-- 3. What's new -->
 <section>
-  <h2>What's new</h2>
-  <div class="rule"></div>
-  <table style="font-size:.62em">
-    <tr><th>Exists today</th><th>What users complain about</th></tr>
-    <tr><td><b>Alta</b>: closet, daily outfits, avatar, shopping (the closest)</td><td>Outfits "feel random", miss weather; avatar takes tries; learning is a black box</td></tr>
-    <tr><td><b>Daydream</b> chat shopping · <b>Doppl</b> photo try-on</td><td>Don't know your closet or day; show looks, not fit</td></tr>
-    <tr><td><b>Indyx</b>, <b>Style DNA</b>, <b>ChatGPT</b></td><td>Tedious setup; wrong color reads; generic looks, wrong links</td></tr>
-  </table>
-  <p style="font-size:.75em;margin-top:.8em">
-    <span class="pill">learning you can see, rules enforced in code</span><span class="pill">compliments → repeat the formula</span><span class="pill">returns → brand size rules</span><span class="pill">fit before looks (12 wide)</span><span class="pill">only cited, in-size links</span><span class="pill">inspo → outfits + gap shopping</span><span class="pill">the real you in 360°</span>
-  </p>
-</section>
-
-<section>
-  <h2>Ten agents, one model, code in charge</h2>
-  <div class="rule"></div>
-  <div class="cols">
-    <ul>
-      <li><b>Closet Cataloger</b>: photo or product link → tagged item</li>
-      <li><b>Day Planner</b>: <code>get_calendar</code>, <code>get_weather</code> + memory → one outfit per block (+ swap)</li>
-      <li><b>Shopping Scout</b>: <code>search_catalog</code> or <code>web_search</code> (never sees measurements)</li>
-      <li><b>Fit Tailor</b>: <code>fit_check</code> size-chart math → size and zones</li>
-      <li><b>Style Critic</b>: approve, or send back (max 2×)</li>
-      <li><b>Recommender</b> (closet gaps) · <b>Inspo Stylist</b> (screenshots, Pinterest)</li>
-      <li><b>Color</b>, <b>Style</b> and <b>Body</b> analysts: season, archetype, measurements</li>
-      <li><b>Photo Try-On</b>: daily photo + 360° on your <i>own</i> key</li>
-    </ul>
-    <div class="card">
-      <b>Orchestrator = code, not an LLM</b><br />Plan: Planner → grounding check → Critic → revise?<br />Shop: Scout → grounding → Tailor → Critic → re-scout?<br />Learn: taps + returns → memory → no-repeat check after every plan<br /><br />
-      gpt-6-luna for every agent · strict JSON schemas · every call passes a ledger with budgets and a loop guard
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>A real day, planned</h2>
-  <div class="cols">
-    <img class="shot" src="screenshots/today_feedback.jpg" alt="plan with feedback taps" style="max-height:540px;object-fit:cover;object-position:top" />
+  <h2>What's new: a stylist with a point of view, and rules in code</h2>
+  <div style="display:grid;grid-template-columns:1fr 1.15fr;gap:.9em;align-items:start">
     <div>
-      <p class="note">"This is classic Uptown polish with just enough glamour in the silk blouse; let the tailoring do the talking." (Blair, the stylist persona)</p>
-      <ul>
-        <li>Live weather + calendar → one decided outfit per block</li>
-        <li>One tap: wore it · banger · <b>got compliments</b> · comfy · not me · too warm/cold</li>
-        <li>"Not me" → another option ($0.0006); repeats within 14 days are sent back by code</li>
-        <li>The Critic checks weather, dress code, comfort, style and truth</li>
-        <li>Run <code>{{PLAN_RUN_ID}}</code>: {{PLAN_COST}}</li>
-      </ul>
+      <img class="shot" src="screenshots/stylist.png" alt="inspiration board and archetype tiles" style="height:300px;object-position:50% 56%" />
+      <img class="shot" src="screenshots/stylist_goal.png" alt="goal picture and strategy" style="height:185px;margin-top:.4em;object-position:left top" />
+      <p class="cap">Sample profile: her read of the inspiration board, archetypes shown as pictures, and the goal look + strategy she writes.</p>
     </div>
+    <ul style="margin-top:0">
+      <li><b>One stylist, Margaux-Sloan:</b> archetype blend, color season, inspiration board, check-ins and house rules → a read of me (signature, goal picture, strategy) that every styling agent receives</li>
+      <li><b>"No" is enforced in code:</b> a Not for me, a Tell-box tag or a house rule becomes a <b>taste ban</b> ("men's-style loafers", while slim feminine loafers pass), checked on plans, alternates, picks, shop results and picture prompts</li>
+      <li><b>Stylist rules in code:</b> no two statement colors, no brown shoes under black-and-white, nothing casual on a recruiting day, no all-neutral day, no repeats in 14 days, nothing not in the closet</li>
+      <li><b>Fingerprints:</b> same inputs → the same saved pick, instantly, $0</li>
+      <li><b>Real links only:</b> a shop link is kept only if the web search really returned or opened that page</li>
+      <li><b>Pictures on tap, never by surprise</b>; a repeat picture is reused for $0</li>
+    </ul>
   </div>
 </section>
 
+<!-- 4. Agents -->
 <section>
-  <h2>Try it on: the real you</h2>
-  <div style="display:grid;grid-template-columns:0.75fr 2fr;gap:.8em;align-items:start">
-    <img class="shot" src="screenshots/personal/tryon_classroom.jpg" alt="classroom try-on" style="max-height:500px;width:100%;object-fit:cover" />
-    <div style="display:grid;gap:.5em">
-      <img class="shot" src="screenshots/personal/drape_test.png" alt="drape test" style="max-height:245px;width:100%;object-fit:cover;object-position:top" />
-      <img class="shot" src="screenshots/personal/spin_sheet.jpg" alt="360 view" style="max-height:245px;width:100%;object-fit:contain" />
-    </div>
-  </div>
-  <p class="cap">Photo try-on: your photo + outfit + real place + pose, $0.023 per image · Drape test: your face (hair capped) in each season's colors, measured with MediaPipe + an open-source 12-season method · 360°: 8 angles of you, drag to turn ($0.25 once)</p>
-</section>
-
-<section>
-  <h2>What it costs</h2>
+  <h2>14 agents, one model, code in charge</h2>
   <div class="rule"></div>
-  <div class="cols3">
-    <div class="card"><div class="big">{{PLAN_MEDIAN}}<small>plan my day (median of real runs)</small></div></div>
-    <div class="card"><div class="big">{{SHOP_MEDIAN}}<small>shopping search, catalog · {{LIVE_MEDIAN}} live web</small></div></div>
-    <div class="card"><div class="big">{{COST_PER_USER_MONTH}}<small>per active user per month, incl. 8 photo try-ons · {{COST_10K}} / month at 10,000 users</small></div></div>
+  <div class="cols4">
+    <div class="card"><h3>Styling (3)</h3><b>Day Planner</b> (calendar, weather)<br /><b>Style Critic</b> (revise ≤ 2×, best round kept)<br /><b>Wardrobe Recommender</b> (3 pieces + outfits → 6 mock-ups on tap)</div>
+    <div class="card"><h3>Shopping (2)</h3><b>Shopping Scout</b> (catalog or live web, never sees measurements)<br /><b>Fit Tailor</b> (size-chart math, never reads the web)<br />→ Style Critic → "revise" = 2nd search</div>
+    <div class="card"><h3>Closet intake (3)</h3><b>Orienter</b> → <b>Closet Cataloger</b><br /><b>Receipt Reader</b> (photo or PDF)<br />+ cutout, color words, size guess, dupes</div>
+    <div class="card"><h3>Style profile (6)</h3><b>Color Analyst</b> · <b>Body Estimator</b><br /><b>Style Analyst</b> · <b>Aesthetic Reader</b><br /><b>Stylist Read</b> · <b>Inspo Stylist</b></div>
   </div>
-  <ul style="margin-top:.7em">
-    <li>Compact closet format: <b>74% fewer tokens</b> (902 vs 3,517)</li>
-    <li>"Low" reasoning effort: <b>2.5× cheaper, 2.3× faster</b>, same Critic score (4.75/5, n=4 each)</li>
-    <li>Prompt caching, tool-result reuse, 768px photos. Caught and fixed a gateway replay that faked measurements.</li>
+  <div class="flow" style="margin-top:.6em">
+    <b>Orchestrator = plain code, not a boss LLM.</b> Before a call: fingerprint hit → saved result ($0) · ban pre-check on shop requests · ledger with budgets and a 14-call loop guard.
+    After each agent: grounding (closet IDs, seen links) · taste bans + house rules · <code>outfit_rules</code> (colors, dress code, season palette) · no-repeat → a failed check goes back to the agent. Then: best round kept, alternates validated, blocked pieces explained in her voice.
+  </div>
+  <ul style="margin-top:.5em">
+    <li><b>gpt-6-luna</b> for every text agent, strict JSON schemas; reasoning effort <b>medium</b> for the day plan and its Critic review, <b>low</b> everywhere else</li>
+    <li>Pictures: gpt-image-2.5-sunburst (mock-ups, goal picture, product shots, photo try-on, 360°), only on its own key</li>
+    <li>Why code coordinates: the flows are fixed, code checks are cheaper and testable, and specialists keep least privilege</li>
   </ul>
 </section>
 
+<!-- 5. One real run -->
+<section>
+  <h2>One real run: code sends the plan back</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:.9em;align-items:start">
+    <div>
+      <img class="shot" src="screenshots/today_plan.png" alt="day plan" style="height:300px" />
+      <img class="shot" src="screenshots/safety_trace.png" alt="trace: code sends the plan back" style="height:200px;margin-top:.4em;object-position:left top" />
+    </div>
+    <div>
+      <ul style="margin-top:0">
+        <li>Sample closet, Tue Oct 27: spin class, MGT 409, club lunch, recruiter coffee chat, dinner</li>
+        <li>Run <code>{{PLAN_RUN_ID}}</code>: {{PLAN_COST}}</li>
+        <li>Each round, <b>code</b> sent the planner back (sneakers on a recruiting day, brown boots under black-and-white) and dropped alternates that broke the same rules, before the Critic saw them</li>
+        <li>The Critic still said <i>revise</i> after 2 revisions (the Sample's only black flats are banned), so the app showed the <b>best round</b> with her notes instead of looping</li>
+        <li>On my own closet (Oct 26, $0.0109, 158 s): approved in round 2, with my red satin blouse (Bright Winter) in the recruiting look</li>
+      </ul>
+      <p class="note">Every run shows its trace: bans checked, tool calls, each code check, the Critic's verdict, tokens and cost.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6. Shopping -->
+<section>
+  <h2>Shopping in my size, with links that are real</h2>
+  <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:.9em;align-items:start">
+    <div>
+      <img class="shot" src="screenshots/shop_trace.png" alt="live shop with trace" style="height:250px" />
+      <img class="shot" src="screenshots/shop_trace.png" alt="live shop trace rows" style="height:235px;margin-top:.4em;object-position:50% 74%" />
+    </div>
+    <ul style="margin-top:0">
+      <li><b>Find what's missing:</b> 3 pieces + an outfit each for $0.0015; <b>Draw them</b> = 6 mock-ups (~$0.18) only on a tap</li>
+      <li><b>Live shop:</b> shopper-style queries, size evidence ("12 W listed"), then Fit Tailor → Critic; a Critic <i>revise</i> triggers a second search that hears the Critic</li>
+      <li><b>Bug I found:</b> the app trusted only links the model cited, and it rarely cites in JSON, so 4 of 11 live shops lost real finds. Now every URL the search <b>returned or opened</b> is trusted and listed; unseen links are still dropped</li>
+      <li><b>Honest cards:</b> an unconfirmed size gets a grey note, never a green ✓; an unseen price says "Price at store"</li>
+      <li>A request that breaks a no ("pleated mini skirt" vs "never very short") is answered <b>before</b> any paid search, $0</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 7. Tokenomics -->
+<section>
+  <h2>What it costs: pictures dominate</h2>
+  <div class="rule"></div>
+  <div class="cols4">
+    <div class="card"><div class="big">{{PLAN_MEDIAN}}<small>fresh day plan (median; 53 s median, 20 s–3½ min). Same day again: $0</small></div></div>
+    <div class="card"><div class="big">{{LIVE_MEDIAN}}<small>live web shop (median, up to $0.12) · catalog {{SHOP_MEDIAN}} · recs $0.0015</small></div></div>
+    <div class="card"><div class="big">$0.18<small>6 mock-ups, only on tap · photo try-on $0.059</small></div></div>
+    <div class="card"><div class="big">{{COST_PER_USER_MONTH}}<small>per active user per month · {{COST_10K}} at 10,000 users</small></div></div>
+  </div>
+  <div class="bar"><div style="background:var(--navy);flex:1">Text agents {{TEXT_MONTH}}</div><div style="background:var(--burgundy);width:{{IMAGE_SHARE}}">Pictures {{IMAGE_MONTH}} ({{IMAGE_SHARE}}), mostly the daily try-on</div></div>
+  <ul>
+    <li>The month assumes a daily plan and a <b>daily try-on (30)</b>; with try-on opt-in it drops to <b>{{NO_TRYON_MONTH}}</b>, and with retailer feeds instead of live search to <b>{{FEED_COST}}</b></li>
+    <li><b>Cuts that held quality:</b> fingerprints ($0 repeats), pictures on tap + image cache, ban pre-check, compact closet format (<b>74% fewer tokens</b>), prompt caching</li>
+    <li><b>A cut that hurt:</b> low reasoning effort everywhere made the Critic flip-flop on real closets, so the day plan and its Critic run at <b>medium</b> (~6× the old cost, still half a cent)</li>
+  </ul>
+</section>
+
+<!-- 8. Safety -->
 <section>
   <h2>Kept safe, and tested</h2>
+  <div class="rule"></div>
   <div class="cols">
-    <img class="shot" src="screenshots/safety_trace.png" alt="safety" />
-    <ul>
-      <li><b>Prompt injection:</b> reviews cleaned, instruction-like reviews quarantined, the rest fenced as untrusted, blocked in real runs</li>
-      <li><b>Privacy:</b> the agent that reads the web never holds measurements. Photos go out only with consent, are never committed, and have GPS stripped.</li>
-      <li><b>Malfunction:</b> code rejects invented clothes and links; the Critic can't overrule it</li>
-      <li><b>Overspending:</b> $0.05 per run (live web $0.15), $1 per day, 14-call loop guard, rate limit</li>
-      <li><b>{{SAFETY_PASS}}</b> safety checks pass (offline + live)</li>
+    <ul style="margin-top:0">
+      <li><b>Prompt injection:</b> reviews, page titles and calendar fields are cleaned; instruction-like text is quarantined; the rest is fenced as untrusted data</li>
+      <li><b>Privacy:</b> the agent that reads the web never holds measurements; the one that holds them never reads the web. No photo leaves without consent; GPS stripped</li>
+      <li><b>Malfunction:</b> invented clothes or links force a revise and never win best round; bans and house rules checked in code</li>
+      <li><b>Photos of a person:</b> try-on keeps exact face and body, no slimming; graders use a fictional test-kit person</li>
+      <li><b>Overspending:</b> per-run and per-day budgets checked before every call, 14-call loop guard, ≤ 2 Critic revisions</li>
     </ul>
+    <div>
+      <div class="card" style="text-align:center"><div class="big">{{SAFETY_PASS}}<small>safety checks pass: 59 offline (about 20 s from a fresh clone) + 4 live against the real agents</small></div></div>
+      <p class="cap" style="margin-top:.7em">Tested: a poisoned review is quarantined · the live Scout won't reveal measurements · penny loafers blocked everywhere while ballet flats pass · an unchanged plan makes no model call · a never-seen link is dropped · a 1/5 real plan beats a 5/5 plan with an invented "gold gown".</p>
+    </div>
   </div>
 </section>
 
+<!-- 9. Impact -->
 <section>
-  <h2>Impact</h2>
-  <div class="rule"></div>
-  <div class="cols3">
+  <h2>Impact: a real user test (me)</h2>
+  <div style="display:grid;grid-template-columns:1.3fr 1fr;gap:.9em;align-items:start">
+    <div>
+      <div class="cols" style="gap:.6em">
 {{SLIDE_IMPACT_CARDS}}
-    <div class="card"><div class="big">~60 h<small>a year saved per user at 10 min a day · ~21,000 h a year for a 350-person MBA class</small></div></div>
-  </div>
+      </div>
+      <ul>
+        <li>Outfit: about <b>19× faster</b>, approved ("Love this direction") and wearable</li>
+        <li>Shoes: 3 live searches, $0.176; a critic-approved Naturalizer flat in 12 W at DSW; I'd buy</li>
+        <li>Scaled carefully: 10 min a morning ≈ 60 h a year per user</li>
+      </ul>
 {{SLIDE_IMPACT_NOTE}}
+    </div>
+    <div>
+      <img class="shot" src="screenshots/personal/a4_plan_blocks.jpg" alt="my approved plan" style="height:300px;object-fit:contain" />
+      <p class="cap">My approved plan for Oct 26: campus look with my backpack (house rule), recruiting look with my red satin blouse. Before the taste-ban fix, recommendations included black penny loafers I had already rejected; after, none.</p>
+    </div>
+  </div>
 </section>
 
+<!-- 10. Limits & next -->
 <section>
-  <h2>What's next</h2>
+  <h2>Limits, and what's next</h2>
   <div class="rule"></div>
-  <ul>
-    <li><b>Recalibrate color analysis</b> on diverse draped faces, and learn from each drape choice</li>
-    <li><b>Retailer feeds</b> with real size charts and reviews: live shopping at catalog prices ({{FEED_COST}} per user per month)</li>
-    <li><b>Prove the trust curve</b>: does my acceptance of the first pick rise over 2–4 weeks of taps?</li>
-    <li>A 7 a.m. "here's your outfit" notification</li>
-    <li><b>Pilot with 10 classmates</b>: time saved, Critic-versus-human agreement, returns avoided</li>
-  </ul>
+  <div class="cols">
+    <div>
+      <ul style="margin-top:0">
+        <li><b>One real user</b>, no classmates; the shoe "before" is self-reported</li>
+        <li><b>Speed:</b> a fresh plan takes 20 s–3½ min; the Sample Critic still said <i>revise</i></li>
+        <li><b>Live shop</b> $0.055–0.12; listings rarely confirm width or comfort</li>
+        <li><b>Bans are word-based:</b> a black "Cloud Loafer" slipped past "black leather loafers"; "loafers with a wide toe box" was refused</li>
+        <li><b>Try-on likeness:</b> recent try-ons don't look enough like me</li>
+      </ul>
+    </div>
+    <div>
+      <ol style="margin-top:0">
+        <li><b>Pilot with 10 classmates:</b> morning time, Critic-vs-human agreement, returns avoided</li>
+        <li><b>Smarter bans:</b> attributes (style, toe shape, material) + "is this what you meant?"</li>
+        <li><b>Try-on that keeps the person:</b> clothes-only edit on my own photo</li>
+        <li><b>Retailer feeds</b> with real size and width data ({{FEED_COST}} per user per month)</li>
+        <li>A guided first-run walkthrough and a 7 a.m. push</li>
+      </ol>
+    </div>
+  </div>
   <div class="plaid"></div>
   <div class="tag">Closet Twin: a stylist that learns you, dresses you, and buys the right size the first time.</div>
+  <p class="cap">Code: {{REPO_URL}}</p>
 </section>
 
 </div></div>
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
-<script>Reveal.initialize({ hash: true, width: 1280, height: 720, margin: 0.06, transition: "fade" });</script>
+<script>Reveal.initialize({ hash: true, width: 1280, height: 720, margin: 0.04, transition: "fade" });</script>
 </body>
 </html>

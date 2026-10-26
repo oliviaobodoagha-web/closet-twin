@@ -6,7 +6,7 @@ Everything a grader needs to try **every input in the app** without their own ph
 
 ## Two ways to look around
 
-- **Sample** (header toggle): a ready closet, profile, stylist setup and practice shop. Set the date to **2026-10-26** to see a saved plan instantly with no model call. Any other date plans fresh, with the sample calendar moved onto that day.
+- **Sample** (header toggle): a ready closet, profile, stylist setup and practice shop. Set the date to **2026-10-27** to see a saved plan instantly with no model call. Any other date plans fresh, with the sample calendar moved onto that day.
 - **My closet**: starts empty on your machine (`data/user/`, git-ignored). The app keeps every photo, closet add, receipt and calendar here, never in Sample, so use this kit to fill it.
 
 ## Build a test closet in My closet (about 10 minutes)
