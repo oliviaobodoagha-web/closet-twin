@@ -1,0 +1,14 @@
+# Lower bounds only, so pip picks versions that match your Python (3.9 or newer).
+openai>=1.99
+fastapi>=0.110
+uvicorn>=0.27
+python-dotenv>=1.0
+python-multipart>=0.0.9
+icalendar>=5.0
+pillow>=10.0
+certifi>=2024.2.2
+recurring-ical-events>=2.0
+pillow-heif>=0.16
+onnxruntime>=1.17
+numpy>=1.24
+pypdfium2>=4.30

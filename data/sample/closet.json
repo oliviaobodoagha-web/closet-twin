@@ -1,0 +1,601 @@
+[
+ {
+  "id": "c-tee-white",
+  "name": "White crew tee",
+  "category": "top",
+  "subtype": "tee",
+  "colors": [
+   {
+    "name": "white",
+    "hex": "#f4f2ee"
+   }
+  ],
+  "pattern": "solid",
+  "fabric": "cotton",
+  "formality": 2,
+  "warmth": 1,
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "fit": "regular",
+  "length": "regular",
+  "comfort": 4,
+  "image": null,
+  "notes": ""
+ },
+ {
+  "id": "c-tee-black",
+  "name": "Black fitted tee",
+  "category": "top",
+  "subtype": "tee",
+  "colors": [
+   {
+    "name": "black",
+    "hex": "#151515"
+   }
+  ],
+  "pattern": "solid",
+  "fabric": "cotton",
+  "formality": 2,
+  "warmth": 1,
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "fit": "slim",
+  "length": "regular",
+  "comfort": 4,
+  "image": null,
+  "notes": ""
+ },
+ {
+  "id": "c-blouse-cream",
+  "name": "Cream silk blouse",
+  "category": "top",
+  "subtype": "blouse",
+  "colors": [
+   {
+    "name": "cream",
+    "hex": "#efe4cf"
+   }
+  ],
+  "pattern": "solid",
+  "fabric": "silk",
+  "formality": 4,
+  "warmth": 1,
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "fit": "regular",
+  "length": "regular",
+  "comfort": 3,
+  "image": null,
+  "notes": ""
+ },
+ {
+  "id": "c-sweater-camel",
+  "name": "Camel crewneck sweater",
+  "category": "top",
+  "subtype": "sweater",
+  "colors": [
+   {
+    "name": "camel",
+    "hex": "#b98b58"
+   }
+  ],
+  "pattern": "solid",
+  "fabric": "cashmere blend",
+  "formality": 3,
+  "warmth": 3,
+  "seasons": [
+   "fall",
+   "winter",
+   "spring"
+  ],
+  "fit": "regular",
+  "length": "regular",
+  "comfort": 4,
+  "image": null,
+  "notes": ""
+ },
+ {
+  "id": "c-turtle-black",
+  "name": "Black ribbed turtleneck",
+  "category": "top",
+  "subtype": "sweater",
+  "colors": [
+   {
+    "name": "black",
+    "hex": "#1a1a1a"
+   }
+  ],
+  "pattern": "solid",
+  "fabric": "merino",
+  "formality": 3,
+  "warmth": 3,
+  "seasons": [
+   "fall",
+   "winter",
+   "spring"
+  ],
+  "fit": "slim",
+  "length": "regular",
+  "comfort": 4,
+  "image": null,
+  "notes": ""
+ },
+ {
+  "id": "c-oxford-blue",
+  "name": "Light blue oxford shirt",
+  "category": "top",
+  "subtype": "shirt",
+  "colors": [
+   {
+    "name": "light blue",
+    "hex": "#a9c4e4"
+   }
+  ],
+  "pattern": "solid",
+  "fabric": "cotton",
+  "formality": 4,
+  "warmth": 2,
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "fit": "regular",
+  "length": "regular",
+  "comfort": 4,
+  "image": null,
+  "notes": ""
+ },
+ {
+  "id": "c-blazer-black",
+  "name": "Black tailored blazer",
+  "category": "outerwear",
+  "subtype": "blazer",
+  "colors": [
+   {
+    "name": "black",
+    "hex": "#141414"
+   }
+  ],
+  "pattern": "solid",
+  "fabric": "wool blend",
+  "formality": 5,
+  "warmth": 2,
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "fit": "regular",
+  "length": "regular",
+  "comfort": 3,
+  "image": null,
+  "notes": ""
+ },
+ {
+  "id": "c-trench-camel",
+  "name": "Camel trench coat",
+  "category": "outerwear",
+  "subtype": "coat",
+  "colors": [
+   {
+    "name": "camel",
+    "hex": "#c09a68"
+   }
+  ],
+  "pattern": "solid",
+  "fabric": "cotton gabardine",
+  "formality": 4,
+  "warmth": 3,
+  "seasons": [
+   "fall",
+   "spring"
+  ],
+  "fit": "regular",
+  "length": "long",
+  "comfort": 4,
+  "image": null,
+  "notes": ""
+ },
+ {
+  "id": "c-puffer-black",
+  "name": "Black puffer jacket",
+  "category": "outerwear",
+  "subtype": "puffer",
+  "colors": [
+   {
+    "name": "black",
+    "hex": "#191919"
+   }
+  ],
+  "pattern": "solid",
+  "fabric": "nylon",
+  "formality": 1,
+  "warmth": 5,
+  "seasons": [
+   "winter"
+  ],
+  "fit": "regular",
+  "length": "regular",
+  "comfort": 4,
+  "image": null,
+  "notes": ""
+ },
+ {
+  "id": "c-jean-dark",
+  "name": "Dark wash straight jeans",
+  "category": "bottom",
+  "subtype": "jeans",
+  "colors": [
+   {
+    "name": "dark denim",
+    "hex": "#26364f"
+   }
+  ],
+  "pattern": "solid",
+  "fabric": "denim",
+  "formality": 2,
+  "warmth": 2,
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "fit": "regular",
+  "length": "long",
+  "comfort": 4,
+  "image": null,
+  "notes": ""
+ },
+ {
+  "id": "c-trouser-black",
+  "name": "Black wide-leg trousers",
+  "category": "bottom",
+  "subtype": "trousers",
+  "colors": [
+   {
+    "name": "black",
+    "hex": "#121212"
+   }
+  ],
+  "pattern": "solid",
+  "fabric": "crepe",
+  "formality": 4,
+  "warmth": 2,
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "fit": "relaxed",
+  "length": "long",
+  "comfort": 5,
+  "image": null,
+  "notes": ""
+ },
+ {
+  "id": "c-trouser-cream",
+  "name": "Cream pleated trousers",
+  "category": "bottom",
+  "subtype": "trousers",
+  "colors": [
+   {
+    "name": "cream",
+    "hex": "#ece2cf"
+   }
+  ],
+  "pattern": "solid",
+  "fabric": "cotton",
+  "formality": 4,
+  "warmth": 2,
+  "seasons": [
+   "spring",
+   "summer",
+   "fall"
+  ],
+  "fit": "relaxed",
+  "length": "long",
+  "comfort": 4,
+  "image": null,
+  "notes": ""
+ },
+ {
+  "id": "c-skirt-pink",
+  "name": "Hot pink satin midi skirt",
+  "category": "bottom",
+  "subtype": "skirt",
+  "colors": [
+   {
+    "name": "hot pink",
+    "hex": "#e0337f"
+   }
+  ],
+  "pattern": "solid",
+  "fabric": "satin",
+  "formality": 4,
+  "warmth": 1,
+  "seasons": [
+   "spring",
+   "summer",
+   "fall"
+  ],
+  "fit": "regular",
+  "length": "midi",
+  "comfort": 4,
+  "image": null,
+  "notes": ""
+ },
+ {
+  "id": "c-dress-black",
+  "name": "Black knit midi dress",
+  "category": "dress",
+  "subtype": "dress",
+  "colors": [
+   {
+    "name": "black",
+    "hex": "#161616"
+   }
+  ],
+  "pattern": "solid",
+  "fabric": "knit",
+  "formality": 4,
+  "warmth": 2,
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "fit": "regular",
+  "length": "midi",
+  "comfort": 5,
+  "image": null,
+  "notes": ""
+ },
+ {
+  "id": "c-legging-black",
+  "name": "Black high-rise leggings",
+  "category": "activewear",
+  "subtype": "leggings",
+  "colors": [
+   {
+    "name": "black",
+    "hex": "#0f0f0f"
+   }
+  ],
+  "pattern": "solid",
+  "fabric": "nylon spandex",
+  "formality": 1,
+  "warmth": 2,
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "fit": "slim",
+  "length": "long",
+  "comfort": 5,
+  "image": null,
+  "notes": ""
+ },
+ {
+  "id": "c-sportsbra-pink",
+  "name": "Pink sports bra",
+  "category": "activewear",
+  "subtype": "sports_bra",
+  "colors": [
+   {
+    "name": "pink",
+    "hex": "#f06aa6"
+   }
+  ],
+  "pattern": "solid",
+  "fabric": "nylon spandex",
+  "formality": 1,
+  "warmth": 1,
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "fit": "regular",
+  "length": "regular",
+  "comfort": 4,
+  "image": null,
+  "notes": ""
+ },
+ {
+  "id": "c-zip-grey",
+  "name": "Grey half-zip pullover",
+  "category": "activewear",
+  "subtype": "pullover",
+  "colors": [
+   {
+    "name": "heather grey",
+    "hex": "#9b9ea3"
+   }
+  ],
+  "pattern": "solid",
+  "fabric": "fleece",
+  "formality": 1,
+  "warmth": 3,
+  "seasons": [
+   "fall",
+   "winter",
+   "spring"
+  ],
+  "fit": "regular",
+  "length": "regular",
+  "comfort": 5,
+  "image": null,
+  "notes": ""
+ },
+ {
+  "id": "c-sneaker-white",
+  "name": "White leather sneakers",
+  "category": "shoes",
+  "subtype": "sneakers",
+  "colors": [
+   {
+    "name": "white",
+    "hex": "#f2f2f2"
+   }
+  ],
+  "pattern": "solid",
+  "fabric": "cotton",
+  "formality": 2,
+  "warmth": 2,
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "fit": "regular",
+  "length": "regular",
+  "comfort": 4,
+  "image": null,
+  "notes": "",
+  "toe_box": "regular",
+  "heel_in": 1.0,
+  "walkable": true,
+  "size_label": "11"
+ },
+ {
+  "id": "c-runner-pink",
+  "name": "Pink running shoes (wide)",
+  "category": "shoes",
+  "subtype": "running",
+  "colors": [
+   {
+    "name": "pink",
+    "hex": "#ef5a9c"
+   }
+  ],
+  "pattern": "solid",
+  "fabric": "cotton",
+  "formality": 1,
+  "warmth": 2,
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "fit": "regular",
+  "length": "regular",
+  "comfort": 5,
+  "image": null,
+  "notes": "",
+  "toe_box": "wide",
+  "heel_in": 1.2,
+  "walkable": true,
+  "size_label": "11W"
+ },
+ {
+  "id": "c-loafer-black",
+  "name": "Black leather loafers",
+  "category": "shoes",
+  "subtype": "loafers",
+  "colors": [
+   {
+    "name": "black",
+    "hex": "#161616"
+   }
+  ],
+  "pattern": "solid",
+  "fabric": "cotton",
+  "formality": 4,
+  "warmth": 2,
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "fit": "regular",
+  "length": "regular",
+  "comfort": 3,
+  "image": null,
+  "notes": "pinch a little after 1 mile",
+  "toe_box": "regular",
+  "heel_in": 0.8,
+  "walkable": true,
+  "size_label": "11"
+ },
+ {
+  "id": "c-boot-brown",
+  "name": "Brown ankle boots, block heel",
+  "category": "shoes",
+  "subtype": "boots",
+  "colors": [
+   {
+    "name": "cognac",
+    "hex": "#8a4f2a"
+   }
+  ],
+  "pattern": "solid",
+  "fabric": "cotton",
+  "formality": 3,
+  "warmth": 4,
+  "seasons": [
+   "fall",
+   "winter",
+   "spring"
+  ],
+  "fit": "regular",
+  "length": "regular",
+  "comfort": 4,
+  "image": null,
+  "notes": "",
+  "toe_box": "wide",
+  "heel_in": 2.0,
+  "walkable": true,
+  "size_label": "11W"
+ },
+ {
+  "id": "c-bag-black",
+  "name": "Black leather tote",
+  "category": "accessory",
+  "subtype": "bag",
+  "colors": [
+   {
+    "name": "black",
+    "hex": "#121212"
+   }
+  ],
+  "pattern": "solid",
+  "fabric": "cotton",
+  "formality": 4,
+  "warmth": 1,
+  "seasons": [
+   "spring",
+   "summer",
+   "fall",
+   "winter"
+  ],
+  "fit": "regular",
+  "length": "regular",
+  "comfort": 4,
+  "image": null,
+  "notes": ""
+ }
+]

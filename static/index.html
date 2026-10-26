@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Closet Twin</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2247%22 fill=%22%2314213d%22 stroke=%22%23b08d57%22 stroke-width=%224%22/%3E%3Ctext x=%2250%22 y=%2263%22 font-size=%2238%22 text-anchor=%22middle%22 fill=%22%23d9bf8c%22 font-family=%22Georgia,serif%22 font-style=%22italic%22%3ECT%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=a6c" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#14213d"/><circle cx="32" cy="32" r="27" fill="none" stroke="#b08d57" stroke-width="1.2"/><circle cx="32" cy="32" r="24.5" fill="none" stroke="#b08d57" stroke-width="0.5" stroke-dasharray="1 2"/><text x="32" y="40" text-anchor="middle" font-family="Playfair Display, Georgia, serif" font-style="italic" font-size="22" fill="#d9bf8c">CT</text><path d="M24 50 q8 4 16 0" stroke="#b08d57" stroke-width="1" fill="none"/><circle cx="32" cy="12" r="1.6" fill="#d9bf8c"/></svg></div>
+      <div>
+        <h1>Closet <em>Twin</em></h1>
+        <p class="tagline">Your AI stylist · the real you, in 360° · your closet</p>
+      </div>
+    </div>
+    <div class="top-right">
+      <div class="dataset-toggle" role="group" aria-label="Data set">
+        <button data-ds="sample">Sample</button>
+        <button data-ds="user">My closet</button>
+      </div>
+      <div class="meter" id="meter" title="Tokens and cost of the last run, and total spend today">
+        <div class="meter-row"><span class="meter-label">Last run</span><span id="meter-last">no runs yet</span></div>
+        <div class="meter-row"><span class="meter-label">Today</span><span id="meter-today">$0.0000</span></div>
+      </div>
+    </div>
+  </header>
+  <div id="key-warning" class="banner hidden">
+    <strong>No API key found.</strong> Put <code>PORTKEY_API_KEY=...</code> in a <code>.env</code> file in this folder or the folder above it, then restart the app.
+  </div>
+
+  <nav class="tabs" id="tabs">
+    <button data-tab="today" class="active">Today</button>
+    <button data-tab="closet">Closet</button>
+    <button data-tab="fitting">Fitting Room</button>
+    <button data-tab="shop">Shop</button>
+    <button data-tab="me">Me</button>
+    <button data-tab="runs">Runs &amp; Safety</button>
+  </nav>
+
+  <main>
+    <!-- TODAY -->
+    <section id="tab-today" class="tab active">
+      <div class="section-head">
+        <div>
+          <h2>Plan my day</h2>
+          <p class="muted">Your stylist reads your calendar and the weather, builds outfits from your closet around your archetypes, and double-checks every look before you see it.</p>
+        </div>
+        <div class="row gap">
+          <input type="date" id="day" />
+          <button class="btn primary" id="plan-btn">✦ Plan my outfits</button>
+        </div>
+      </div>
+      <div class="grid-2">
+        <div class="card glass" id="weather-card"><div class="skeleton">Loading weather…</div></div>
+        <div class="card glass" id="calendar-card"><div class="skeleton">Loading calendar…</div></div>
+      </div>
+      <div id="checkin-banner"></div>
+      <div id="stylist-ask"></div>
+      <div id="plan-status"></div>
+      <div id="today-real"></div>
+      <div id="plan-out"></div>
+      <div class="card glass recs-card" id="recs-card">
+        <div class="row between wrap">
+          <div><div class="kicker-sm">Your stylist recommends</div><h3>The next 3 pieces to buy</h3>
+            <p class="muted small">The 3 pieces that would pull your closet together, each shown in an outfit with what you own.</p>
+            <label class="small recs-look">The look I'm going for <input id="recs-look" type="text" maxlength="80" placeholder="e.g. polished recruiting, Blair Waldorf prep, cozy campus fall" /></label></div>
+          <div class="row gap wrap"><button class="btn primary" type="button" id="recs-btn">✦ Find what's missing</button>
+            <button class="btn ghost" type="button" id="recs-shop-btn">…and shop the top pick</button></div>
+        </div>
+        <div id="recs-status"></div>
+        <div id="recs-out"></div>
+      </div>
+    </section>
+
+    <!-- CLOSET -->
+    <section id="tab-closet" class="tab">
+      <div class="section-head">
+        <div>
+          <h2>Your closet</h2>
+          <p class="muted">Snap a photo and your stylist tags it. Photos are shrunk and stripped of location data before the AI sees them.</p>
+        </div>
+      </div>
+      <div class="card glass add-card" id="add-card">
+        <div class="row between wrap gap">
+          <div><div class="kicker-sm">New piece</div><h3 class="add-title">+ Add to my wardrobe</h3>
+            <p class="muted small" style="margin:0">Snap or upload photos, paste product links, or upload a receipt: a screenshot of an order email brings in every piece with its picture, size and price.</p></div>
+          <div class="chips" id="add-modes"><button class="chip active" type="button" data-addmode="photo">📷 Photo</button><button class="chip" type="button" data-addmode="link">🔗 Paste a link</button><button class="chip" type="button" data-addmode="receipt">🧾 Upload receipt</button></div>
+        </div>
+        <div id="sample-guard" class="sample-guard hidden">You're looking at the <b>Sample</b> practice closet. Your pieces go in <b>My closet</b>.
+          <button class="btn small primary" type="button" id="guard-switch">Switch to My closet</button></div>
+        <form id="photo-form" class="row gap wrap add-form">
+          <label class="btn primary file-btn">⬆ Upload photos<input type="file" id="photo-file" accept="image/*" multiple hidden /></label>
+          <button class="btn ghost" type="button" id="closet-camera">📷 Use camera</button>
+          <span class="small muted">Pick as many as you like; they start uploading right away.</span>
+        </form>
+        <form id="link-form" class="row gap wrap add-form hidden">
+          <textarea id="link-url" rows="3" placeholder="https://store.com/product-page&#10;one link per line, paste as many as you like"></textarea>
+          <div id="link-paste" class="link-paste" tabindex="0">
+            <div class="lp-empty"><b>Store won't share its photo?</b> On the product page, right-click the photo → <b>Copy Image</b>, then click here and press <b>⌘V</b> (or drag the photo in).</div>
+            <div class="lp-full hidden"><img alt="" /><span class="small">Product photo ready. It's added with the link above.</span><button type="button" class="btn small ghost" data-lp-clear>✕ Remove</button></div>
+          </div>
+          <div class="row gap wrap" style="flex-basis:100%;align-items:center">
+            <button class="btn primary" type="submit">Add</button>
+            <span class="small muted">or</span>
+            <label class="btn ghost file-btn">🧾 Upload receipt<input type="file" id="link-receipt-file" accept="image/*,application/pdf" hidden /></label>
+            <span class="small muted">Order email or receipt: pictures, sizes and prices come in automatically.</span>
+          </div>
+        </form>
+        <form id="receipt-form" class="stack gap add-form hidden">
+          <div class="row gap wrap"><label class="btn primary file-btn">⬆ Upload receipt<input type="file" id="receipt-file" accept="image/*,application/pdf" hidden /></label>
+            <span class="small muted">A photo of a paper receipt, a screenshot of an order email or page, or a PDF. You can also paste a screenshot here with ⌘V.</span></div>
+          <div id="receipt-lines"></div>
+        </form>
+        <div id="photo-status"></div>
+        <div id="add-followup"></div>
+      </div>
+      <div class="chips" id="closet-filters"></div>
+      <div class="closet-grid" id="closet-grid"></div>
+      <nav id="sec-rail" class="sec-rail" aria-label="Jump to a closet section"></nav>
+    </section>
+
+    <!-- FITTING ROOM -->
+    <section id="tab-fitting" class="tab">
+      <div class="fitting-layout">
+        <div class="stage card">
+                    <div class="stage-overlay">
+            <div class="chips" id="scene-btns"></div>
+          </div>
+          <div class="stage-bottom">
+            <div class="chips" id="move-btns"></div>
+          </div>
+          <div id="stage-error" class="stage-error hidden"></div>
+        </div>
+        <aside class="side">
+          <div class="card glass">
+            <div class="row between">
+              <h3>Outfit</h3>
+              <button class="btn small ghost" id="snap-btn">⬇ Snapshot</button>
+            </div>
+            <ul class="outfit-list" id="outfit-list"></ul>
+          </div>
+          <div class="card glass">
+            <h3>Fit notes</h3>
+            <div id="fit-report"></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SHOP -->
+    <section id="tab-shop" class="tab">
+      <div class="section-head">
+        <div>
+          <h2>Find something new</h2>
+          <p class="muted">Your stylist searches real stores for your sizes (in My closet), your colors and your style, "tries it on" against your measurements, and double-checks every pick. The Sample data set uses a small practice catalog.</p>
+        </div>
+      </div>
+      <form id="shop-form" class="card glass shop-form">
+        <input type="text" id="shop-q" placeholder="What are you looking for?" maxlength="300" />
+        <label class="row gap live-toggle"><span class="switch"><input type="checkbox" id="live-web" /><span></span></span> Search real stores in my size <span class="muted small" id="live-note">(live web, about a minute, about $0.07)</span></label>
+        <button class="btn primary" type="submit">Find it</button>
+      </form>
+      <div class="chips" id="shop-examples"></div>
+      <div id="shop-status"></div>
+      <div id="shop-out"></div>
+      <div class="shop-extras">
+        <div class="card glass" id="inspo-card">
+          <div class="kicker-sm">Inspiration</div><h3>Recreate a look</h3>
+          <p class="muted small">Upload screenshots of looks you love, or paste a Pinterest board link. Your stylist finds what you already own and what's missing.</p>
+          <form id="inspo-form" class="stack gap">
+            <label class="btn ghost">Upload screenshot(s)<input type="file" id="inspo-file" accept="image/*" multiple hidden /></label>
+            <div class="row gap wrap"><input type="url" id="inspo-url" placeholder="https://pinterest.com/you/board" /><button class="btn primary" type="submit">Read board</button></div>
+          </form>
+          <div id="inspo-status"></div>
+          <div id="inspo-out"></div>
+        </div>
+        <div class="card glass" id="watch-card">
+          <div class="row between wrap gap"><div><div class="kicker-sm">Price tracker</div><h3>Watching</h3></div>
+            <button class="btn small primary" type="button" id="watch-check">↻ Check prices</button></div>
+          <div id="watch-out"><p class="muted small">Loading…</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ME -->
+    <section id="tab-me" class="tab">
+      <div class="section-head">
+        <div>
+          <h2>Set up Margaux-Sloan</h2>
+          <div class="muted info-line">Five steps. Come back to any of them anytime. <details class="info"><summary title="Privacy">ⓘ</summary><span>Everything you add stays. Your measurements stay on this computer; store searches only ever get size labels.</span></details></div>
+        </div>
+        <button class="btn primary" id="save-profile">Save profile</button>
+      </div>
+      <nav class="setup-steps" id="setup-steps"></nav>
+      <div class="step-head" id="step-colors"><span class="step-num">1</span><div><h3>Your face &amp; colors</h3><p class="muted small">A face close-up finds your color season.</p></div><span class="step-done" data-done="colors"></span></div>
+      <div class="card glass" id="colors-card">
+        <div class="two-col">
+          <div>
+            <h4>Color season</h4>
+            <div class="closeup-box">
+              <div class="closeup-thumb" id="face-thumb">Face</div>
+              <div>
+                <b>Take a close-up of your face</b>
+                <div class="muted small info-line">Daylight, no filter. <details class="info"><summary title="Tips">ⓘ</summary><span>Face a window, hair back, little makeup. Your season is computed automatically.</span></details></div>
+                <label class="small"><input type="checkbox" id="closeup-consent" /> I agree this close-up is sent to OpenAI for color analysis.</label>
+                <div class="row gap wrap" style="margin-top:6px">
+                  <button class="btn primary" type="button" id="face-camera">📷 Take close-up</button>
+                  <label class="btn ghost">Upload photo<input type="file" id="face-file" accept="image/*" hidden /></label>
+                </div>
+              </div>
+            </div>
+            <div id="season-out" class="small muted" style="margin-top:10px"></div>
+            <div class="row gap wrap small" style="margin-top:6px"><select id="season-override"><option value="">Know your season? Choose it</option></select></div>
+          </div>
+          <div>
+            <h4>How I use your colors</h4>
+            <div id="color-use" class="small"></div>
+          </div>
+        </div>
+        <div id="drape-test" class="drape-test hidden">
+          <div class="drape-head">
+            <h4>Drape test</h4>
+            <span class="tag">how real color analysts decide</span>
+          </div>
+          <div class="muted small info-line">Pick the drape that makes your skin clear and your eyes bright. Tap to compare. <details class="info"><summary title="How to judge">ⓘ</summary><span>Your close-up with each season's colors under your face. Clear, even skin and brighter eyes mean yes; shadows under the eyes or a grey or sallow cast mean no.</span></details></div>
+          <div class="drape-grid" id="drape-grid"></div>
+        </div>
+        <div id="analysis-status"></div>
+      </div>
+      <div class="step-head" id="step-body"><span class="step-num">2</span><div><h3>Your body</h3><p class="muted small">A full-body photo, or just your sizes.</p></div><span class="step-done" data-done="body"></span></div>
+      <div class="card glass" id="me-photo-card">
+        <h3>Your photo <span class="tag">for photo try-on</span></h3>
+        <div class="muted small info-line">Standing straight, plain background, fitted clothes. <details class="info"><summary title="Privacy">ⓘ</summary><span>It stays on this computer (never in git) and is sent to OpenAI only for color analysis or a photo try-on. Location data (EXIF/GPS) is removed.</span></details></div>
+        <div class="row gap wrap" style="align-items:flex-start">
+          <div id="me-photo-preview" class="me-photo-preview"></div>
+          <form id="me-photo-form" class="stack gap">
+            <input type="file" id="me-photo-file" accept="image/*" />
+            <label class="small"><input type="checkbox" id="me-photo-consent" /> I agree my photo is sent to OpenAI for color analysis and try-on images.</label>
+            <div class="row gap wrap"><button class="btn primary" type="button" id="me-photo-camera">📷 Take photo with camera</button><button class="btn ghost" type="submit">Upload a file</button><button class="btn ghost" type="button" id="me-photo-delete">Remove photo</button></div>
+          </form>
+        </div>
+        <details class="more"><summary>Real places for try-ons <span class="muted">(optional)</span></summary>
+        <p class="muted small">Snap the real spot (your classroom, coffee shop, gym) and the try-on puts you there.</p>
+        <form id="place-form" class="row gap wrap">
+          <select id="place-scene"><option value="classroom">Classroom</option><option value="coffee">Coffee shop</option><option value="gym">Gym</option><option value="office">Office desk</option><option value="street">Campus walk</option><option value="dinner">Dinner</option></select>
+          <input type="file" id="place-file" accept="image/*" />
+          <button class="btn ghost" type="submit">Upload place photo</button>
+        </form>
+        <div id="place-status" class="small muted"></div></details>
+      </div>
+      <form id="profile-form" class="profile-grid"></form>
+      <div class="step-head" id="step-style"><span class="step-num">3</span><div><h3>Your style</h3><p class="muted small">Show me your inspiration or take the quiz; I'll show you the goal.</p></div><span class="step-done" data-done="style"></span></div>
+      <div class="card stylist-card" id="stylist-card"><div class="skeleton">Loading your stylist…</div></div>
+      <div class="step-head" id="step-closet"><span class="step-num">4</span><div><h3>Your wardrobe</h3><p class="muted small">Photos, links or receipts.</p></div><span class="step-done" data-done="closet"></span></div>
+      <div class="card glass" id="setup-closet"></div>
+      <div class="step-head" id="step-week"><span class="step-num">5</span><div><h3>Your week</h3><p class="muted small">So every plan fits your real day.</p></div><span class="step-done" data-done="week"></span></div>
+      <div class="card glass">
+        <h3>Calendar</h3>
+        <div class="muted small info-line">Paste your calendar's private iCal link. <details class="info"><summary title="Where to find it">ⓘ</summary><span>Google Calendar: Settings → your calendar → <i>Secret address in iCal format</i>. Outlook: Settings → Calendar → Shared calendars → <i>Publish</i> → ICS link. Repeating classes and time zones are handled; the link is saved only on this computer.</span></details></div>
+        <form id="cal-link-form" class="row gap wrap">
+          <input type="url" id="cal-link" placeholder="https://calendar.google.com/calendar/ical/…/basic.ics" style="flex:1;min-width:240px" />
+          <input type="text" id="cal-tz" placeholder="Time zone, e.g. America/New_York" style="width:230px" />
+          <button class="btn primary" type="submit">Connect</button>
+          <button class="btn ghost" type="button" id="cal-unlink">Disconnect</button>
+        </form>
+        <div id="cal-link-status" class="small muted"></div>
+        <p class="muted small" style="margin-top:12px"><b>Or upload</b> an exported <code>.ics</code> file.</p>
+        <form id="ics-form" class="row gap wrap">
+          <input type="file" id="ics-file" accept=".ics,text/calendar" />
+          <button class="btn ghost" type="submit">Upload calendar</button>
+        </form>
+        <div id="ics-status"></div>
+      </div>
+    </section>
+
+    <!-- RUNS -->
+    <section id="tab-runs" class="tab">
+      <div class="section-head">
+        <div>
+          <h2>Runs, tokens &amp; safety</h2>
+          <p class="muted">Every button press is logged with real token counts from the API. Click a run to see what each agent did.</p>
+        </div>
+        <button class="btn ghost" id="refresh-runs">↻ Refresh</button>
+      </div>
+      <div class="grid-3" id="run-stats"></div>
+      <div class="card glass" id="limits-card"></div>
+      <div class="card glass table-wrap"><table class="runs" id="runs-table"></table></div>
+      <div id="run-detail"></div>
+    </section>
+  </main>
+
+  <div id="drape-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="drape-title">
+    <div class="modal-card drape-card">
+      <div class="row between">
+        <h3 id="drape-title">Compare drapes</h3>
+        <button class="btn small ghost" type="button" id="drape-close">Close</button>
+      </div>
+      <p class="muted small">Look at your skin and eyes, not the colors themselves. Which side makes you look rested and bright?</p>
+      <div class="drape-compare">
+        <figure>
+          <canvas id="drape-a" width="420" height="420"></canvas>
+          <div class="drape-nav"><button class="chip" type="button" data-nav="a" data-dir="-1" aria-label="Previous drape">‹</button><figcaption id="drape-a-name"></figcaption><button class="chip" type="button" data-nav="a" data-dir="1" aria-label="Next drape">›</button></div>
+          <button class="btn primary" type="button" data-choose="a">Choose this season</button>
+        </figure>
+        <figure>
+          <canvas id="drape-b" width="420" height="420"></canvas>
+          <div class="drape-nav"><button class="chip" type="button" data-nav="b" data-dir="-1" aria-label="Previous drape">‹</button><figcaption id="drape-b-name"></figcaption><button class="chip" type="button" data-nav="b" data-dir="1" aria-label="Next drape">›</button></div>
+          <button class="btn primary" type="button" data-choose="b">Choose this season</button>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div id="camera-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="cam-title">
+    <div class="modal-card">
+      <h3 id="cam-title">Camera</h3>
+      <div class="cam-stage">
+        <video id="cam-video" playsinline muted autoplay></video>
+        <img id="cam-shot" class="hidden" alt="your photo" />
+        <div id="cam-count" class="cam-count hidden"></div>
+      </div>
+      <p id="cam-hint" class="muted small"></p>
+      <div class="row gap wrap">
+        <button class="btn primary" type="button" id="cam-snap">📸 Take photo</button>
+        <button class="btn ghost" type="button" id="cam-timer">⏱ 5-second timer</button>
+        <button class="btn primary hidden" type="button" id="cam-use">✓ Use this photo</button>
+        <button class="btn ghost hidden" type="button" id="cam-retake">↺ Retake</button>
+        <button class="btn ghost" type="button" id="cam-flip">⇄ Switch camera</button>
+        <button class="btn ghost" type="button" id="cam-cancel">Cancel</button>
+      </div>
+    </div>
+  </div>
+  <div id="toast" class="toast hidden"></div>
+  <script type="module" src="app.js?v=a5e"></script>
+  <script type="module" src="real_me.js?v=a6b"></script>
+  <script type="module" src="wardrobe_ui.js?v=a2f"></script>
+  <script type="module" src="today_ui.js?v=a2f"></script>
+  <script type="module" src="shop_extra.js?v=a2f"></script>
+</body>
+</html>

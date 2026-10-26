@@ -1,0 +1,61 @@
+Closet Twin safety tests (offline): 59/59 passed
+
+[PASS] injection: review that orders the AI ('ignore all previous instructions...') is quarantined
+[PASS] injection: 0px hidden <span> text is stripped before the agent reads it  (kept text: 'This shoe is perfect.')
+[PASS] injection: the block is logged as a safety event for the run trace  ('Ava Block-Heel Pump': blocked 1 review(s) that tried to give the AI instructions and stripped hidden text from 1 review(s).)
+[PASS] injection: zero-width characters and HTML tags are removed  ('Great shoes comfy & wide')
+[PASS] injection: untrusted text cannot close its own <untrusted> fence
+[PASS] injection: hidden text in a calendar invite is stripped  ('Coffee chat')
+[PASS] privacy: Shopping Scout's prompt contains no body measurements (only size labels)  (checked values ['70', '36', '30', '40', '32'])
+[PASS] privacy: a web query containing a measurement is detected
+[PASS] privacy: a normal size query is not a false alarm
+[PASS] grounding: an outfit item that is not in the closet is caught
+[PASS] grounding: a product link not in the search results is caught
+[PASS] grounding: invented item forces a revision even when the critic model says approve  (planner ran 3x, final ids ['c-tee-white', 'c-jean-dark', 'c-sneaker-white'])
+[PASS] budget: per-run dollar cap stops the next model call  (Stopped: this run hit its $0.0010 spending cap.)
+[PASS] budget: per-run token cap stops the next model call  (Stopped: this run used its 5,000-token budget.)
+[PASS] budget: loop guard stops a run after 14 model calls  (Stopped: this run reached 14 model calls (loop guard).)
+[PASS] budget: daily budget stops new runs once used up  (Stopped: today's $1.00 budget is used up.)
+[PASS] budget: rate limit allows 6 runs/minute and blocks the rest  (3 blocked)
+[PASS] photos: GPS/EXIF location is stripped from uploads
+[PASS] photos: photos are shrunk to 768px before the model sees them (fewer tokens)  ((3000, 2000) -> (768, 512))
+[PASS] photos: non-image upload is rejected
+[PASS] photos: oversized upload is rejected
+[PASS] photo: photo try-on without OPENAI_API_KEY is refused (course key is never used for images)
+[PASS] photo: your photo is never sent without consent
+[PASS] links: product page parser reads Open Graph + JSON-LD (title, brand, store, price, image)  ({'title': 'Camel Wool Coat', 'brand': 'Acme', 'store': 'Example Store', 'price': 249.5, 'currency': 'USD', 'image': 'https://shop.example.com/img/coat.jpg', 'images': ['https://shop.example.com/img/coat.jpg'], 'flags': ['hidden_text']})
+[PASS] links: hidden prompt injection in a product title is stripped and flagged  (['hidden_text'])
+[PASS] links: SSRF guard rejects localhost, private/metadata IPs, non-http schemes and huge URLs  (6/6 rejected)
+[PASS] price watch: drop detection: current < previous, change vs. first price, lowest price  ({'current': 150.0, 'change_pct': -25.0, 'dropped': True})
+[PASS] inspo: Pinterest board -> RSS feed, pins deduped and upgraded to 736px, other hosts refused  (https://www.pinterest.com/olivia/fall-fits.rss)
+[PASS] palette: an all-neutral day is flagged when the closet has a season-color piece (and names it)  (every outfit today is neutrals only (black/white). Bring one of their season colors into a)
+[PASS] palette: a day with one season-color piece passes
+[PASS] palette: no flag when the closet has no season colors to offer
+[PASS] palette: in a real plan run the neutral day goes back to the planner and the colored one is shown  (planner ran 2x)
+[PASS] grounding: best-round: a 1/5 plan from her closet beats two 5/5 'approved' plans with an invented item  (planner ran 3x, shown ['c-top', 'c-pant', 'c-flat'])
+[PASS] fingerprint: /api/plan with unchanged inputs returns the saved plan (kept, no run, no model call)
+[PASS] fingerprint: /api/recommend with unchanged inputs returns the saved picks (kept, no run, no model call)
+[PASS] fingerprint: a changed input (colder forecast) or 'Fresh take' does start a new run  (runs ['plan_day', 'plan_day'])
+[PASS] taste bans: the ✕ note becomes a scoped ban (men's-style loafers), not a ban on all loafers  (men's-style, too-corporate loafers (slim, pointed, ballet-style or kitten-heel feminine versions are fine); itchy or stiff fabrics (soft or lined versions are fine))
+[PASS] taste bans: 'Black square-toe penny loafers' is banned; 'Slim pointed-toe loafers' and ballet flats pass
+[PASS] taste bans: 'non-itchy' is not read as itchy (an itchy sweater still is)
+[PASS] taste bans: plan: penny loafers sent back every round, then taken out; slim-loafer and flats alternates kept  (main ['c-top', 'c-pant'])
+[PASS] taste bans: recs: penny loafers replaced by a backup (trench); slim loafers kept; penny loafers out of outfits  (Hot-pink cashmere crew; Slim pointed-toe loafers; Navy trench coat)
+[PASS] taste bans: live shop: penny loafer pick dropped, slim loafers and ballet flats kept  (Slim pointed-toe loafers; Wide-width ballet flats)
+[PASS] taste bans: mock-up + goal picture prompts never ask for penny loafers (goal look gets ballet flats instead)  (2 prompt(s))
+[PASS] grounding: live shop: a link only in an open_page action or only in search sources is kept (no citations needed)  (https://www.jcpenney.com/p/worthington-trouser; https://www.macys.com/shop/product/ponte-pant)
+[PASS] grounding: live shop: a link the search never returned or opened is still dropped
+[PASS] grounding: trace lists the trusted links (count + list) and names each open/find page instead of a blank 'web_search'  (3 trusted link(s) the search returned or opened (0 cited))
+[PASS] grounding: every pick dropped (both rounds) -> her note says so honestly instead of praising a pick that isn't shown  (I couldn't verify a link I'd stand behind, so I'm not showing what I found. Try Search more broadly and I'll look again.)
+[PASS] grounding: live shop: a 'revise' with 3 picks still gets a second search that hears the critic; its pick leads  (Round-2 fix; Round-1 A; Round-1 B)
+[PASS] taste bans: a request that breaks a no ('pleated mini skirt' vs never very short) is answered before any paid search  (You told me never very short or low-cut, so I didn't search for that (no charge))
+[PASS] grounding: '18 not confirmed' is not shown as a confirmed size (moved to a size note); '18 listed' stays confirmed
+[PASS] grounding: a price the scout didn't see is 0 by rule and shows as 'Price at store', never '$0'
+[PASS] cost: same mock-up asked again: the saved piece + outfit board are reused, 0 image calls, $0  (first 2 call(s), again 0)
+[PASS] cost: two identical requests at once (a double tap or second tab) pay for one drawing, not two  (2 call(s) for 2 requests)
+[PASS] cost: a rejected picture is never handed out again: only that one is redrawn (the piece is still reused)  (1 call(s))
+[PASS] taste bans: 'Not for me' + a reason is saved and the reply names the new hard rule; a 'Love it' adds none  (men's-style loafers (slim, pointed, ballet-style or kitten-heel feminine versions are fine))
+[PASS] house rules: plan: the class look carries her backpack (tote swapped out, she's told why); the dinner look keeps the tote  (campus ['h-top', 'h-pant', 'h-flat', 'h-pack'])
+[PASS] house rules: recs: the CDO Office Hours outfit gets her backpack instead of the tote; the theatre outfit keeps it  (['h-top', 'h-pack'] / ['h-top', 'h-tote'])
+[PASS] house rules: Me tab: the backpack rule shows as checked in code, a ✕ note names its rule, a ♡ claims none  (['Argyle backpack for school, other bags only off campus'])
+[PASS] photos: try-on prompt keeps her exact face + body proportions, sends her face close-up as image 2, no 'good day' beautifying

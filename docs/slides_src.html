@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Closet Twin: Slides</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root { --ivory:#fbf8f2; --navy:#14213d; --ink:#1d2433; --muted:#5d6474; --green:#1f4d3a; --burgundy:#6e1f2e; --gold:#b8964e; --line:#e6dfd1; }
+  .reveal-viewport { background: var(--ivory); }
+  .reveal { font-family: "Jost", Arial, sans-serif; color: var(--ink); font-size: 30px; }
+  .reveal h1, .reveal h2, .reveal h3 { font-family: "Playfair Display", Georgia, serif; color: var(--navy); text-transform: none; letter-spacing: 0; margin-bottom: .35em; }
+  .reveal h1 { font-size: 2.6em; }
+  .reveal h2 { font-size: 1.55em; }
+  .reveal .slides section { text-align: left; }
+  .kicker { font-size: .5em; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); margin-bottom: .4em; }
+  .tag { font-family: "Playfair Display", serif; font-style: italic; color: var(--burgundy); font-size: .95em; }
+  .plaid { height: 10px; width: 100%; margin: .5em 0 .8em; border-radius: 2px; background:
+      repeating-linear-gradient(90deg, rgba(20,33,61,.85) 0 12px, transparent 12px 26px),
+      repeating-linear-gradient(0deg, rgba(184,150,78,.55) 0 3px, transparent 3px 9px), #6e1f2e; }
+  .rule { border-top: 1px solid var(--gold); margin: .3em 0 .6em; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1em; align-items: center; }
+  .cols3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: .7em; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: .55em .7em; box-shadow: 0 6px 18px rgba(20,33,61,.06); font-size: .62em; line-height: 1.4; }
+  .card b { color: var(--navy); }
+  .big { font-family: "Playfair Display", serif; font-size: 2.1em; color: var(--navy); line-height: 1; }
+  .big small { display: block; font-family: "Jost"; font-size: .3em; color: var(--muted); letter-spacing: .05em; margin-top: .35em; }
+  .reveal ul { font-size: .72em; line-height: 1.45; }
+  .reveal li { margin: .25em 0; }
+  .reveal img.shot { max-width: 100%; border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 10px 30px rgba(20,33,61,.12); margin: 0; max-height: 520px; }
+  .cap { font-size: .45em; color: var(--muted); margin-top: .3em; }
+  .reveal table { font-size: .5em; border-collapse: collapse; width: 100%; }
+  .reveal table th { background: var(--navy); color: #fff; padding: .35em .5em; border: none; }
+  .reveal table td { padding: .3em .5em; border-bottom: 1px solid var(--line); }
+  .pill { display: inline-block; font-size: .55em; border: 1px solid var(--gold); border-radius: 999px; padding: .1em .6em; margin: .15em .15em 0 0; color: var(--navy); background: #fff; }
+  .note { font-family: "Playfair Display", serif; font-style: italic; color: var(--green); font-size: .7em; border-left: 3px solid var(--gold); padding-left: .6em; }
+  .todo { background: #fff1c9; outline: 1px dashed #b8964e; }
+  .reveal .progress { color: var(--gold); }
+  .reveal .controls { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="reveal"><div class="slides">
+
+<section>
+  <div class="kicker">MGT 409 · Final Project · Olivia Obodoagha</div>
+  <h1>Closet Twin</h1>
+  <div class="tag">An AI stylist that dresses you from your real closet for your real day, and learns from every outfit.</div>
+  <div class="plaid"></div>
+  <div class="cols">
+    <ul>
+      <li><b>Dresses you daily</b>: one decided outfit per part of your day, from calendar + live weather</li>
+      <li><b>Learns</b>: banger, got compliments, comfy, not me → no repeats, more of what works</li>
+      <li><b>Returns teach it your size</b> per brand</li>
+      <li><b>Shops gaps in your size</b> and budget (resale too), from Pinterest or Instagram inspiration, with price tracking</li>
+      <li>Shows it on <b>the real you, in 360°</b>; a Critic checks every suggestion first</li>
+    </ul>
+    <img class="shot" src="screenshots/personal/tryon_classroom.jpg" alt="photo try-on" style="max-height:540px" />
+  </div>
+</section>
+
+<section>
+  <h2>The problem</h2>
+  <div class="rule"></div>
+  <div class="cols3">
+    <div class="card"><div class="big">12–18<small>minutes every morning choosing an outfit (UK surveys, about 2,000 women each)</small></div></div>
+    <div class="card"><div class="big">24–31%<small>of online apparel orders are returned (Coresight 2023, ECDB 2026)</small></div></div>
+    <div class="card"><div class="big">53–70%<small>of those returns are about size and fit (Coresight, McKinsey)</small></div></div>
+  </div>
+  <p style="font-size:.66em;margin-top:.8em"><b>Me:</b> an MBA day goes spin class → case discussion → recruiter coffee chat → dinner. And I wear a <b>women's 12 wide</b>. "Available in 12" doesn't tell me "wide, with a roomy toe, walkable all day". That lives only in the reviews.</p>
+</section>
+
+<section>
+  <h2>What's new</h2>
+  <div class="rule"></div>
+  <table style="font-size:.62em">
+    <tr><th>Exists today</th><th>What users complain about</th></tr>
+    <tr><td><b>Alta</b>: closet, daily outfits, avatar, shopping (the closest)</td><td>Outfits "feel random", miss weather; avatar takes tries; learning is a black box</td></tr>
+    <tr><td><b>Daydream</b> chat shopping · <b>Doppl</b> photo try-on</td><td>Don't know your closet or day; show looks, not fit</td></tr>
+    <tr><td><b>Indyx</b>, <b>Style DNA</b>, <b>ChatGPT</b></td><td>Tedious setup; wrong color reads; generic looks, wrong links</td></tr>
+  </table>
+  <p style="font-size:.75em;margin-top:.8em">
+    <span class="pill">learning you can see, rules enforced in code</span><span class="pill">compliments → repeat the formula</span><span class="pill">returns → brand size rules</span><span class="pill">fit before looks (12 wide)</span><span class="pill">only cited, in-size links</span><span class="pill">inspo → outfits + gap shopping</span><span class="pill">the real you in 360°</span>
+  </p>
+</section>
+
+<section>
+  <h2>Ten agents, one model, code in charge</h2>
+  <div class="rule"></div>
+  <div class="cols">
+    <ul>
+      <li><b>Closet Cataloger</b>: photo or product link → tagged item</li>
+      <li><b>Day Planner</b>: <code>get_calendar</code>, <code>get_weather</code> + memory → one outfit per block (+ swap)</li>
+      <li><b>Shopping Scout</b>: <code>search_catalog</code> or <code>web_search</code> (never sees measurements)</li>
+      <li><b>Fit Tailor</b>: <code>fit_check</code> size-chart math → size and zones</li>
+      <li><b>Style Critic</b>: approve, or send back (max 2×)</li>
+      <li><b>Recommender</b> (closet gaps) · <b>Inspo Stylist</b> (screenshots, Pinterest)</li>
+      <li><b>Color</b>, <b>Style</b> and <b>Body</b> analysts: season, archetype, measurements</li>
+      <li><b>Photo Try-On</b>: daily photo + 360° on your <i>own</i> key</li>
+    </ul>
+    <div class="card">
+      <b>Orchestrator = code, not an LLM</b><br />Plan: Planner → grounding check → Critic → revise?<br />Shop: Scout → grounding → Tailor → Critic → re-scout?<br />Learn: taps + returns → memory → no-repeat check after every plan<br /><br />
+      gpt-6-luna for every agent · strict JSON schemas · every call passes a ledger with budgets and a loop guard
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>A real day, planned</h2>
+  <div class="cols">
+    <img class="shot" src="screenshots/today_feedback.jpg" alt="plan with feedback taps" style="max-height:540px;object-fit:cover;object-position:top" />
+    <div>
+      <p class="note">"This is classic Uptown polish with just enough glamour in the silk blouse; let the tailoring do the talking." (Blair, the stylist persona)</p>
+      <ul>
+        <li>Live weather + calendar → one decided outfit per block</li>
+        <li>One tap: wore it · banger · <b>got compliments</b> · comfy · not me · too warm/cold</li>
+        <li>"Not me" → another option ($0.0006); repeats within 14 days are sent back by code</li>
+        <li>The Critic checks weather, dress code, comfort, style and truth</li>
+        <li>Run <code>{{PLAN_RUN_ID}}</code>: {{PLAN_COST}}</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Try it on: the real you</h2>
+  <div style="display:grid;grid-template-columns:0.75fr 2fr;gap:.8em;align-items:start">
+    <img class="shot" src="screenshots/personal/tryon_classroom.jpg" alt="classroom try-on" style="max-height:500px;width:100%;object-fit:cover" />
+    <div style="display:grid;gap:.5em">
+      <img class="shot" src="screenshots/personal/drape_test.png" alt="drape test" style="max-height:245px;width:100%;object-fit:cover;object-position:top" />
+      <img class="shot" src="screenshots/personal/spin_sheet.jpg" alt="360 view" style="max-height:245px;width:100%;object-fit:contain" />
+    </div>
+  </div>
+  <p class="cap">Photo try-on: your photo + outfit + real place + pose, $0.023 per image · Drape test: your face (hair capped) in each season's colors, measured with MediaPipe + an open-source 12-season method · 360°: 8 angles of you, drag to turn ($0.25 once)</p>
+</section>
+
+<section>
+  <h2>What it costs</h2>
+  <div class="rule"></div>
+  <div class="cols3">
+    <div class="card"><div class="big">{{PLAN_MEDIAN}}<small>plan my day (median of real runs)</small></div></div>
+    <div class="card"><div class="big">{{SHOP_MEDIAN}}<small>shopping search, catalog · {{LIVE_MEDIAN}} live web</small></div></div>
+    <div class="card"><div class="big">{{COST_PER_USER_MONTH}}<small>per active user per month, incl. 8 photo try-ons · {{COST_10K}} / month at 10,000 users</small></div></div>
+  </div>
+  <ul style="margin-top:.7em">
+    <li>Compact closet format: <b>74% fewer tokens</b> (902 vs 3,517)</li>
+    <li>"Low" reasoning effort: <b>2.5× cheaper, 2.3× faster</b>, same Critic score (4.75/5, n=4 each)</li>
+    <li>Prompt caching, tool-result reuse, 768px photos. Caught and fixed a gateway replay that faked measurements.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Kept safe, and tested</h2>
+  <div class="cols">
+    <img class="shot" src="screenshots/safety_trace.png" alt="safety" />
+    <ul>
+      <li><b>Prompt injection:</b> reviews cleaned, instruction-like reviews quarantined, the rest fenced as untrusted, blocked in real runs</li>
+      <li><b>Privacy:</b> the agent that reads the web never holds measurements. Photos go out only with consent, are never committed, and have GPS stripped.</li>
+      <li><b>Malfunction:</b> code rejects invented clothes and links; the Critic can't overrule it</li>
+      <li><b>Overspending:</b> $0.05 per run (live web $0.15), $1 per day, 14-call loop guard, rate limit</li>
+      <li><b>{{SAFETY_PASS}}</b> safety checks pass (offline + live)</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Impact</h2>
+  <div class="rule"></div>
+  <div class="cols3">
+{{SLIDE_IMPACT_CARDS}}
+    <div class="card"><div class="big">~60 h<small>a year saved per user at 10 min a day · ~21,000 h a year for a 350-person MBA class</small></div></div>
+  </div>
+{{SLIDE_IMPACT_NOTE}}
+</section>
+
+<section>
+  <h2>What's next</h2>
+  <div class="rule"></div>
+  <ul>
+    <li><b>Recalibrate color analysis</b> on diverse draped faces, and learn from each drape choice</li>
+    <li><b>Retailer feeds</b> with real size charts and reviews: live shopping at catalog prices ({{FEED_COST}} per user per month)</li>
+    <li><b>Prove the trust curve</b>: does my acceptance of the first pick rise over 2–4 weeks of taps?</li>
+    <li>A 7 a.m. "here's your outfit" notification</li>
+    <li><b>Pilot with 10 classmates</b>: time saved, Critic-versus-human agreement, returns avoided</li>
+  </ul>
+  <div class="plaid"></div>
+  <div class="tag">Closet Twin: a stylist that learns you, dresses you, and buys the right size the first time.</div>
+</section>
+
+</div></div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>Reveal.initialize({ hash: true, width: 1280, height: 720, margin: 0.06, transition: "fade" });</script>
+</body>
+</html>

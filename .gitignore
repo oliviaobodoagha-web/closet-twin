@@ -1,0 +1,45 @@
+# Secrets: never commit real keys. Copy .env.example to .env instead.
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Olivia's personal wardrobe photos, measurements and calendar stay on her machine
+data/user/
+
+# Run logs are written locally
+logs/*.jsonl
+
+.DS_Store
+.claude/
+
+# Personal photos and generated try-ons, even if made in the sample data set
+data/*/me.jpg
+data/*/places/
+data/*/tryons/
+data/sample/images/*
+!data/sample/images/.gitkeep
+data/*/face.jpg
+data/*/wrist.jpg
+
+# Images of Olivia (used in report.html / slides.html only, never committed)
+docs/screenshots/personal/
+# Canvas deliverables are built locally and uploaded to Canvas
+report.html
+slides.html
+docs/_*_filled.html
+data/*/memory.json
+data/*/watchlist.json
+
+# background-removal models (downloaded on first use)
+models/
+
+# personal style inspiration screenshots (photos of real people): never commit
+style inspirations/
+
+# handoff notes for coding agents (mention her personal profile): keep local
+HANDOFF.md
